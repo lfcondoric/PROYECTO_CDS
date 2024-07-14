@@ -5,6 +5,7 @@ using namespace std;
 
 void menu();
 void registro();
+void ingresardt();
 void iniciosesion();
 
 int main(){
@@ -12,7 +13,7 @@ int main(){
     return 0;
 }
 
-void menu(){   //Primer menú del programa
+void menu(){//Primer menú del programa
     int op;
     do{
     	cout<<"\t\t\tBienvenido al programa CDS\n";
@@ -47,7 +48,7 @@ void menu(){   //Primer menú del programa
     }while(op!=0);
 }
 
-void registro(){
+void registro(){//menú para la opción 1.Registro
 	int op;
 	do{
 		cout<<"1. Ingresar Datos personales\n";
@@ -56,7 +57,7 @@ void registro(){
 		switch(op){
 			case 1:
 				system("cls");
-				//ingresardt();
+				ingresardt();
 				break;
 			case 2:
 				system("cls");
@@ -68,8 +69,19 @@ void registro(){
 	}while(op!=2);
 }
 
-void iniciosesion(){
-	int op,dni,dniprueba=2024;
+void ingresardt(){
+	cout<<"DNI: "<<endl;
+	cout<<"Nombres: "<<endl;
+	cout<<"Apellidos: "<<endl;
+	cout<<"Numero de celular: "<<endl;
+	cout<<"Edad: "<<endl;
+	cout<<"Sexo: "<<endl;
+	system("pause");
+	system("cls");
+}
+
+void iniciosesion(){//menú para la opción 2. Iniciar sesión
+	int op,dni,dniprueba=2024;//Variable para comprobar;
 	do{
 		cout<<"1. Ingresar DNI\n";
 		cout<<"2. Volver\n";
@@ -79,6 +91,7 @@ void iniciosesion(){
 				system("cls");
 				cout<<"DNI:";cin>>dni;
 				if(dni==dniprueba){
+					system("cls");
 					//menu2();
 				}else{
 					system("cls");
