@@ -11,8 +11,9 @@ int main(){
 }
 
 void menu(){   //Primer menú del programa
-    int op;
+    int op,e=0;
     do{
+    	cout<<"\t\t\tBienvenido al programa CDS\n";
         cout<<"1. Registrarse"<<endl; 
         cout<<"2. Iniciar sesion"<<endl;
         cout<<"0. Salir"<<endl;
@@ -22,12 +23,15 @@ void menu(){   //Primer menú del programa
             system("cls");
             break;
         case 2:
-            system("cls");
+        	system("cls");
             break;
         case 0:
             system("cls");
-            cout<<"Saliendo del programa..."<<endl;
-            sleep(3);
+            cout<<"Saliendo del programa";
+            for(int i=1;i<=3;i++){
+            	cout<<".";
+            	sleep(1);
+			}
             break;
         default:
             system("cls");
@@ -37,3 +41,4 @@ void menu(){   //Primer menú del programa
         }
     }while(op!=0);
 }
+
