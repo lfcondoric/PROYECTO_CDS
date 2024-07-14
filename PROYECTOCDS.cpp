@@ -1,11 +1,21 @@
 #include<iostream>
 #include<unistd.h>
 #include<ctime>
+#include<string>
 using namespace std;
+int a=0;
+struct USUARIOS{
+	int dni;
+	string nombres;
+	string apellidos;
+	int celular;
+	int edad;
+	char sexo[20];
+}us[100];
 
 void menu();
 void registro();
-void ingresardt();
+void ingresardt(int x);
 void iniciosesion();
 
 int main(){
@@ -57,7 +67,8 @@ void registro(){//menú para la opción 1.Registro
 		switch(op){
 			case 1:
 				system("cls");
-				ingresardt();
+				ingresardt(a);
+				a++;
 				break;
 			case 2:
 				system("cls");
@@ -69,13 +80,14 @@ void registro(){//menú para la opción 1.Registro
 	}while(op!=2);
 }
 
-void ingresardt(){
-	cout<<"DNI: "<<endl;
-	cout<<"Nombres: "<<endl;
-	cout<<"Apellidos: "<<endl;
-	cout<<"Numero de celular: "<<endl;
-	cout<<"Edad: "<<endl;
-	cout<<"Sexo: "<<endl;
+void ingresardt(int x){
+	cout<<"DNI: ";cin>>us[x].dni;
+	cin.ignore();
+	cout<<"Nombres: ";getline(cin, us[x].nombres);
+	cout<<"Apellidos: ";getline(cin, us[x].apellidos);
+	cout<<"Numero de celular: ";cin>>us[x].celular;
+	cout<<"Edad: ";cin>>us[x].edad;
+	cout<<"Sexo: ";cin>>us[x].sexo;
 	system("pause");
 	system("cls");
 }
