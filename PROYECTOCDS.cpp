@@ -5,6 +5,7 @@ using namespace std;
 
 void menu();
 void registro();
+void iniciosesion();
 
 int main(){
     menu();
@@ -26,7 +27,7 @@ void menu(){   //Primer menú del programa
             break;
         case 2:
         	system("cls");
-        	//iniciosesion;
+        	iniciosesion();
             break;
         case 0:
             system("cls");
@@ -59,9 +60,40 @@ void registro(){
 				break;
 			case 2:
 				system("cls");
-				return;
 				break;
+			default:
+        		system("cls");
+            	break;
+			}
+	}while(op!=2);
+}
+
+void iniciosesion(){
+	int op,dni,dniprueba=2024;
+	do{
+		cout<<"1. Ingresar DNI\n";
+		cout<<"2. Volver\n";
+		cout<<"Selecione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+				system("cls");
+				cout<<"DNI:";cin>>dni;
+				if(dni==dniprueba){
+					//menu2();
+				}else{
+					system("cls");
+					cout<<"DNI mal ingresado o no esta registrado\n";
+					system("pause");
+					system("cls");
+				}
+				break;
+			case 2:
+				system("cls");
+				break;
+			default:
+        		system("cls");
+            	break;
 		}
-	}while(op!=0);
+	}while(op!=2);
 }
 
