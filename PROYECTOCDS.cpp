@@ -18,6 +18,7 @@ void registro();
 void ingresardt(int x);
 void iniciosesion();
 void verificardni(int dni);
+void menu2(int a);
 
 int main(){
     menu();
@@ -119,7 +120,7 @@ void verificardni(int dni){
 	for(int i=0;i<100;i++){//Verificar si el dni esta registrado
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
-			//menu2();<-- si se cumple el if llamaría a la función señalada
+			menu2(i);//<-- si se cumple el if llamaría a la función señalada
 		}
 	}
 	//En caso de que no se cumpla
@@ -127,5 +128,38 @@ void verificardni(int dni){
 	cout<<"DNI mal ingresado o no esta registrado\n";
 	system("pause");
 	system("cls");
+}
+
+void menu2(int a){//Segundo Menu principal
+	int op;
+	do{
+		cout<<"1. Registro al Seguro de Salud\n";
+		cout<<"2. Servicios que brinda\n";
+		cout<<"3. Citas\n";
+		cout<<"4. Farmacia\n";
+		cout<<"5. Notificaciones\n";
+		cout<<"0. Salir\n";
+		cout<<"Seleccione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 0:
+				break;
+			default:
+				system("cls");
+          		cout<<"Opcion invalida. Intentelo de nuevo\n";
+           		system("pause");
+          		system("cls");
+          	 	break;
+		}
+	}while(op!=0);
 }
 
