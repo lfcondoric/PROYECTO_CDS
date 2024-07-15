@@ -116,12 +116,13 @@ void iniciosesion(){//menú para la opción 2. Iniciar sesión
 }
 
 void verificardni(int dni){
-	for(int i=0;i<100;i++){
-		if(dni==us[i].dni){
+	for(int i=0;i<100;i++){//Verificar si el dni esta registrado
+		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
-			//menu2();
+			//menu2();<-- si se cumple el if llamaría a la función señalada
 		}
 	}
+	//En caso de que no se cumpla
 	system("cls");
 	cout<<"DNI mal ingresado o no esta registrado\n";
 	system("pause");
