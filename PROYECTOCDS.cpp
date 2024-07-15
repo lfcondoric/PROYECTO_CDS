@@ -17,6 +17,7 @@ void menu();
 void registro();
 void ingresardt(int x);
 void iniciosesion();
+void verificardni(int dni);
 
 int main(){
     menu();
@@ -80,7 +81,7 @@ void registro(){//menú para la opción 1.Registro
 	}while(op!=2);
 }
 
-void ingresardt(int x){
+void ingresardt(int x){//Registro de datos
 	cout<<"DNI: ";cin>>us[x].dni;
 	cin.ignore();
 	cout<<"Nombres: ";getline(cin, us[x].nombres);
@@ -93,7 +94,7 @@ void ingresardt(int x){
 }
 
 void iniciosesion(){//menú para la opción 2. Iniciar sesión
-	int op,dni,dniprueba=2024;//Variable para comprobar;
+	int op,a;
 	do{
 		cout<<"1. Ingresar DNI\n";
 		cout<<"2. Volver\n";
@@ -101,16 +102,8 @@ void iniciosesion(){//menú para la opción 2. Iniciar sesión
 		switch(op){
 			case 1:
 				system("cls");
-				cout<<"DNI:";cin>>dni;
-				if(dni==dniprueba){
-					system("cls");
-					//menu2();
-				}else{
-					system("cls");
-					cout<<"DNI mal ingresado o no esta registrado\n";
-					system("pause");
-					system("cls");
-				}
+				cout<<"DNI:";cin>>a;
+				verificardni(a);
 				break;
 			case 2:
 				system("cls");
@@ -120,5 +113,18 @@ void iniciosesion(){//menú para la opción 2. Iniciar sesión
             	break;
 		}
 	}while(op!=2);
+}
+
+void verificardni(int dni){
+	for(int i=0;i<100;i++){
+		if(dni==us[i].dni){
+			system("cls");
+			//menu2();
+		}
+	}
+	system("cls");
+	cout<<"DNI mal ingresado o no esta registrado\n";
+	system("pause");
+	system("cls");
 }
 
