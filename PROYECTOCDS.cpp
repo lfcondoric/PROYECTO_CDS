@@ -3,7 +3,20 @@
 #include<ctime>
 #include<string>
 using namespace std;
-int a=0;
+
+int a=0;//Varible global para determinar en que índice se encuentra almacenada los datos
+
+struct FECHA{
+	int dia,mes,anio;
+};
+
+struct DOMI{
+	string departamento;
+	string provincia;
+	string distrito;
+	string direcion;
+};
+
 struct USUARIOS{
 	int dni;
 	string nombres;
@@ -11,6 +24,8 @@ struct USUARIOS{
 	int celular;
 	int edad;
 	char sexo[20];
+	FECHA nacimiento;
+	DOMI domicilio;
 }us[100];
 
 void menu();
@@ -207,12 +222,12 @@ void seguro(int a){
 void registrosds(int a){
 	cout<<"----INGRESE SUS DATOS PERSONALES-----";
 	cout<<"\n1. DE LA AFILIACIÓN\n";
-	cout<<"- Fecha: \n";//<<Agrear fecha actual con la libreria ctime;
+	cout<<"- Fecha: \n";//<<Agrear fecha actual con la libreria ctime
 	cout<<"\n2. DATOS DEL ASEGURADO\n";
-	cout<<"- Tipo de documento: DNI --------- Nro.Documento: \n";
+	cout<<"- Tipo de documento: DNI\n Nro.Documento: "<<us[a].dni<<endl;
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
-	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
-	cout<<"- Fecha de nacimiento: ";
+	cout<<"- Apellidos: "<<us[a].apellidos<<endl;
+	cout<<"- Fecha de nacimiento: \n";
 	cout<<"- Edad: "<<us[a].edad<<endl;
 	cout<<"\n3. DOMICILIO DEL ASEGURADO\n";
 	cout<<"- Departamento: \n";
