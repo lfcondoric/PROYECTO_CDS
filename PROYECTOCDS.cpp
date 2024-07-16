@@ -142,16 +142,28 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
+				system("cls");
+				//seguro();
 				break;
 			case 2:
+				system("cls");
+				//servicios();
 				break;
 			case 3:
+				system("cls");
+				//citas();
 				break;
 			case 4:
+				system("cls");
+				//farmacia();
 				break;
 			case 5:
+				system("cls");
+				//notificaciones();
 				break;
 			case 0:
+				system("cls");
+				menu();
 				break;
 			default:
 				system("cls");
