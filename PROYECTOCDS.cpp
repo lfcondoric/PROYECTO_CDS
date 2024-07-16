@@ -21,7 +21,6 @@ struct USUARIOS{
 	int dni;
 	string nombres;
 	string apellidos;
-	int celular;
 	int edad;
 	char sexo[20];
 	FECHA nacimiento;
@@ -104,9 +103,6 @@ void ingresardt(int x){//Registro de datos
 	cin.ignore();
 	cout<<"Nombres: ";getline(cin, us[x].nombres);
 	cout<<"Apellidos: ";getline(cin, us[x].apellidos);
-	cout<<"Numero de celular: ";cin>>us[x].celular;
-	cout<<"Edad: ";cin>>us[x].edad;
-	cout<<"Sexo: ";cin>>us[x].sexo;
 	system("pause");
 	system("cls");
 }
@@ -228,8 +224,9 @@ void registrosds(int a){
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
 	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
 	cout<<"- Fecha de nacimiento: \n Dia:";cin>>us[a].nacimiento.dia;cout<<"Mes: ";cin>>us[a].nacimiento.mes;cout<<"Anio: ";cin>>us[a].nacimiento.anio;
-	cout<<"- Edad: "<<us[a].edad<<endl;
-	cout<<"\n3. DOMICILIO DEL ASEGURADO\n";
+	cout<<"- Edad: ";cin>>us[a].edad;
+	cout<<"- Sexo: ";cin>>us[a].sexo;
+	cout<<"\n4. DOMICILIO DEL ASEGURADO\n";
 	cin.ignore();
 	cout<<"- Departamento: ";getline(cin, us[a].domicilio.departamento);
 	cout<<"- Provincia: ";getline(cin, us[a].domicilio.provincia);
