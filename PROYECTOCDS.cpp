@@ -4,7 +4,7 @@
 #include<string>
 using namespace std;
 
-int a=0;//Varible global para determinar en que índice se encuentra almacenada los datos
+int a=0;//Variable global para determinar en que índice se encuentra almacenada los datos de los usuarios
 
 struct FECHA{
 	int dia,mes,anio;
@@ -85,7 +85,7 @@ void registro(){//menú para la opción 1.Registro
 		switch(op){
 			case 1:
 				system("cls");
-				ingresardt(a);
+				ingresardt(a);//Al mandar una copia de a estoy mandando el indice donde quiero que se guarden los datos de un usuario
 				a++;
 				break;
 			case 2:
@@ -134,6 +134,7 @@ void verificardni(int dni){
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
 			menu2(i);//<-- si se cumple el if llamaría a la función señalada
+			return;
 		}
 	}
 	//En caso de que no se cumpla
@@ -175,8 +176,13 @@ void menu2(int a){//Segundo Menu principal
 				//notificaciones();
 				break;
 			case 0:
+				cout<<"Cerrando sesion";
+           			for(int i=1;i<=3;i++){
+            		cout<<".";
+            	sleep(1);
+				}
 				system("cls");
-				menu();
+				return;
 				break;
 			default:
 				system("cls");
@@ -192,7 +198,7 @@ void seguro(int a){
 	int op;
 	do{
 		cout<<"1. Continuar con el registro\n";
-		cout<<"2. Beneficios e información sobre el SDS\n";
+		cout<<"2. Beneficios e informacion sobre el SDS\n";
 		cout<<"3. Volver\n";
 		cout<<"Selecione una opcion: ";cin>>op;
 		switch(op){
@@ -223,8 +229,8 @@ void registrosds(int a){
 	cout<<"- Tipo de documento: DNI\n Nro.Documento: "<<us[a].dni<<endl;
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
 	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
-	cout<<"- Fecha de nacimiento: \n Dia:";cin>>us[a].nacimiento.dia;cout<<"Mes: ";cin>>us[a].nacimiento.mes;cout<<"Anio: ";cin>>us[a].nacimiento.anio;
-	cout<<"- Edad: ";cin>>us[a].edad;
+	cout<<"- Fecha de nacimiento: \nDia:";cin>>us[a].nacimiento.dia;cout<<"Mes: ";cin>>us[a].nacimiento.mes;cout<<"Anio: ";cin>>us[a].nacimiento.anio;
+	cout<<"- Edad: ";cin>>us[a].edad;//Se piensa habilitar algunas lecturas de datos adicionales de acuerdo a la edad del afiliado
 	cout<<"- Sexo: ";cin>>us[a].sexo;
 	cout<<"\n4. DOMICILIO DEL ASEGURADO\n";
 	cin.ignore();
@@ -232,5 +238,8 @@ void registrosds(int a){
 	cout<<"- Provincia: ";getline(cin, us[a].domicilio.provincia);
 	cout<<"- Distrito: ";getline(cin, us[a].domicilio.distrito);
 	cout<<"- Direccion: ";getline(cin, us[a].domicilio.direcion);
+	//Se piensa agregar mas lecturas de datos
+	system("cls");
+	return;
 
 }
