@@ -19,6 +19,7 @@ void ingresardt(int x);
 void iniciosesion();
 void verificardni(int dni);
 void menu2(int a);
+void seguro();
 
 int main(){
     menu();
@@ -138,12 +139,12 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
-		cout<<"0. Salir\n";
+		cout<<"0. Cerrar Sesión\n";
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
-				//seguro();
+				seguro();
 				break;
 			case 2:
 				system("cls");
@@ -173,5 +174,32 @@ void menu2(int a){//Segundo Menu principal
           	 	break;
 		}
 	}while(op!=0);
+}
+
+void seguro(){
+	int op;
+	do{
+		cout<<"1. Continuar con el registro\n";
+		cout<<"2. Beneficios e información sobre el SDS\n";
+		cout<<"3. Volver\n";
+		cout<<"Selecione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+				system("cls");
+				//registrosds();
+				break;
+			case 2:
+				system("cls");
+				//info();
+				break;
+			case 3:
+				system("cls");
+				return;
+				break;
+			default:
+        		system("cls");
+            	break;
+			}
+	}while(op!=2);
 }
 
