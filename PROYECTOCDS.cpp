@@ -226,12 +226,14 @@ void registrosds(int a){
 	cout<<"\n2. DATOS DEL ASEGURADO\n";
 	cout<<"- Tipo de documento: DNI\n Nro.Documento: "<<us[a].dni<<endl;
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
-	cout<<"- Apellidos: "<<us[a].apellidos<<endl;
-	cout<<"- Fecha de nacimiento: \n";
+	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
+	cout<<"- Fecha de nacimiento: \n Dia:";cin>>us[a].nacimiento.dia;cout<<"Mes: ";cin>>us[a].nacimiento.mes;cout<<"Anio: ";cin>>us[a].nacimiento.anio;
 	cout<<"- Edad: "<<us[a].edad<<endl;
 	cout<<"\n3. DOMICILIO DEL ASEGURADO\n";
-	cout<<"- Departamento: \n";
-	cout<<"- Provincia: \n";
-	cout<<"- Distrito: \n";
-	cout<<"- Direccion: \n";
+	cin.ignore();
+	cout<<"- Departamento: ";getline(cin, us[a].domicilio.departamento);
+	cout<<"- Provincia: ";getline(cin, us[a].domicilio.provincia);
+	cout<<"- Distrito: ";getline(cin, us[a].domicilio.distrito);
+	cout<<"- Direccion: ";getline(cin, us[a].domicilio.direcion);
+
 }
