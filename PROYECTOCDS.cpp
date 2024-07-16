@@ -19,7 +19,8 @@ void ingresardt(int x);
 void iniciosesion();
 void verificardni(int dni);
 void menu2(int a);
-void seguro();
+void seguro(int a);
+void registrosds(int a);
 
 int main(){
     menu();
@@ -144,7 +145,7 @@ void menu2(int a){//Segundo Menu principal
 		switch(op){
 			case 1:
 				system("cls");
-				seguro();
+				seguro(a);
 				break;
 			case 2:
 				system("cls");
@@ -176,7 +177,7 @@ void menu2(int a){//Segundo Menu principal
 	}while(op!=0);
 }
 
-void seguro(){
+void seguro(int a){
 	int op;
 	do{
 		cout<<"1. Continuar con el registro\n";
@@ -186,7 +187,7 @@ void seguro(){
 		switch(op){
 			case 1:
 				system("cls");
-				//registrosds();
+				registrosds(a);
 				break;
 			case 2:
 				system("cls");
@@ -203,3 +204,19 @@ void seguro(){
 	}while(op!=2);
 }
 
+void registrosds(int a){
+	cout<<"----INGRESE SUS DATOS PERSONALES-----";
+	cout<<"\n1. DE LA AFILIACIÓN\n";
+	cout<<"- Fecha: \n";//<<Agrear fecha actual con la libreria ctime;
+	cout<<"\n2. DATOS DEL ASEGURADO\n";
+	cout<<"- Tipo de documento: DNI --------- Nro.Documento: \n";
+	cout<<"- Nombre: "<<us[a].nombres<<endl;
+	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
+	cout<<"- Fecha de nacimiento: ";
+	cout<<"- Edad: "<<us[a].edad<<endl;
+	cout<<"\n3. DOMICILIO DEL ASEGURADO\n";
+	cout<<"- Departamento: \n";
+	cout<<"- Provincia: \n";
+	cout<<"- Distrito: \n";
+	cout<<"- Direccion: \n";
+}
