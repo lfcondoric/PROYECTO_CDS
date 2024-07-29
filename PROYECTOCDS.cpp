@@ -25,6 +25,7 @@ struct USUARIOS{
 	char sexo[20];
 	FECHA nacimiento;
 	DOMI domicilio;
+	int menperso = 0;//Menú perzonalizado
 }us[100];
 
 void menu();
@@ -146,6 +147,8 @@ void verificardni(int dni){
 
 void menu2(int a){//Segundo Menu principal
 	int op;
+	//Este if tiene como función imprimir el menú indicado para el usuario
+	if(us[a].menperso==0){
 	do{
 		cout<<"1. Registro al Seguro de Salud\n";
 		cout<<"2. Servicios que brinda\n";
@@ -192,33 +195,109 @@ void menu2(int a){//Segundo Menu principal
           	 	break;
 		}
 	}while(op!=0);
-}
-
-void seguro(int a){
-	int op;
-	do{
-		cout<<"1. Continuar con el registro\n";
-		cout<<"2. Beneficios e informacion sobre el SDS\n";
-		cout<<"3. Volver\n";
-		cout<<"Selecione una opcion: ";cin>>op;
+	} else{
+		do{
+		cout<<"1. Seguro de Salud\n";
+		cout<<"2. Servicios que brinda\n";
+		cout<<"3. Citas\n";
+		cout<<"4. Farmacia\n";
+		cout<<"5. Notificaciones\n";
+		cout<<"0. Cerrar Sesión\n";
+		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
-				registrosds(a);
+				seguro(a);
 				break;
 			case 2:
 				system("cls");
-				//info();
+				//servicios();
 				break;
 			case 3:
+				system("cls");
+				//citas();
+				break;
+			case 4:
+				system("cls");
+				//farmacia();
+				break;
+			case 5:
+				system("cls");
+				//notificaciones();
+				break;
+			case 0:
+				cout<<"Cerrando sesion";
+           			for(int i=1;i<=3;i++){
+            		cout<<".";
+            	sleep(1);
+				}
 				system("cls");
 				return;
 				break;
 			default:
-        		system("cls");
-            	break;
+				system("cls");
+          		cout<<"Opcion invalida. Intentelo de nuevo\n";
+           		system("pause");
+          		system("cls");
+          	 	break;
+		}
+	}while(op!=0);
+		
+	}
+}
+
+void seguro(int a){
+	int op;
+	if(us[a].menperso==0){
+		do{
+			cout<<"1. Continuar con el registro\n";
+			cout<<"2. Beneficios e informacion sobre el SDS\n";
+			cout<<"3. Volver\n";
+			cout<<"Selecione una opcion: ";cin>>op;
+			switch(op){
+				case 1:
+					system("cls");
+					registrosds(a);
+					return;
+					break;
+				case 2:
+					system("cls");
+					//info();
+					break;
+				case 3:
+					system("cls");
+					return;
+					break;
+				default:
+        			system("cls");
+          	 	 	break;
 			}
 	}while(op!=2);
+	}else{
+		do{
+			cout<<"1. Imprimir ficha de registro\n";
+			cout<<"2. Beneficios e informacion sobre el SDS\n";
+			cout<<"3. Volver\n";
+			cout<<"Selecione una opcion: ";cin>>op;
+			switch(op){
+				case 1:
+					system("cls");
+					//imprimir(a);
+					break;
+				case 2:
+					system("cls");
+					//info();
+					break;
+				case 3:
+					system("cls");
+					return;
+					break;
+				default:
+        			system("cls");
+            		break;
+			}
+	}while(op!=2);
+	}
 }
 
 void registrosds(int a){
@@ -227,6 +306,8 @@ void registrosds(int a){
 
 	int year = 1900 + time->tm_year;//se suma 1900, porque la libreria toma en cuenta los años desde el año 1900
 	int month = 1 + time->tm_mon;
+	
+	us[a].menperso=1;//Guadar para saber el tipo de menú que se debe imprimir de acuerdo a la interacción del usuario;
 	
 	cout<<"----INGRESE SUS DATOS PERSONALES-----";
 	cout<<"\n1. DE LA AFILIACIÓN\n";
