@@ -222,9 +222,15 @@ void seguro(int a){
 }
 
 void registrosds(int a){
+	time_t now=time(0);
+	tm *time=localtime(&now);//Establece la hora y fecha actual de acuerdo a la fecha y hora local de la pc
+
+	int year = 1900 + time->tm_year;//se suma 1900, porque la libreria toma en cuenta los años desde el año 1900
+	int month = 1 + time->tm_mon;
+	
 	cout<<"----INGRESE SUS DATOS PERSONALES-----";
 	cout<<"\n1. DE LA AFILIACIÓN\n";
-	cout<<"- Fecha: \n";//<<Agrear fecha actual con la libreria ctime
+	cout<<"- Fecha:"<<time->tm_mday<<"/"<<month<<"/"<<year<<endl;
 	cout<<"\n2. DATOS DEL ASEGURADO\n";
 	cout<<"- Tipo de documento: DNI\n Nro.Documento: "<<us[a].dni<<endl;
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
@@ -243,3 +249,5 @@ void registrosds(int a){
 	return;
 
 }
+
+
