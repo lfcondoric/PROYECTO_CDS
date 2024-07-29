@@ -36,6 +36,7 @@ void verificardni(int dni);
 void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
+void imprimir(int a);
 
 int main(){
     menu();
@@ -135,6 +136,7 @@ void verificardni(int dni){
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
 			menu2(i);//<-- si se cumple el if llamaría a la función señalada
+			menu2(i);
 			return;
 		}
 	}
@@ -161,6 +163,7 @@ void menu2(int a){//Segundo Menu principal
 			case 1:
 				system("cls");
 				seguro(a);
+				return;
 				break;
 			case 2:
 				system("cls");
@@ -248,7 +251,7 @@ void menu2(int a){//Segundo Menu principal
 
 void seguro(int a){
 	int op;
-	if(us[a].menperso==0){
+	if(us[a].menperso==0){//Este if tiene como función imprimir el menú indicado para el usuario
 		do{
 			cout<<"1. Continuar con el registro\n";
 			cout<<"2. Beneficios e informacion sobre el SDS\n";
@@ -282,7 +285,7 @@ void seguro(int a){
 			switch(op){
 				case 1:
 					system("cls");
-					//imprimir(a);
+					imprimir(a);
 					break;
 				case 2:
 					system("cls");
@@ -329,6 +332,26 @@ void registrosds(int a){
 	system("cls");
 	return;
 
+}
+
+void imprimir(int a){
+	cout<<"---------------------------------------------------------------\n";
+	cout<<"DATOS DEL ASEGURADO\n";
+	cout<<"\t"<<"DNI: "<<us[a].dni<<endl;
+	cout<<"\t"<<"NOMBRES: "<<us[a].nombres<<endl;
+	cout<<"\t"<<"APELLIDOS: "<<us[a].apellidos<<endl;
+	cout<<"\t"<<"DNI: "<<us[a].nacimiento.dia<<"/"<<us[a].nacimiento.mes<<"/"<<us[a].nacimiento.anio<<endl;
+	cout<<"\t"<<"EDAD: "<<us[a].edad<<endl;
+	cout<<"\t"<<"SEXO: "<<us[a].sexo<<endl;
+	cout<<"DOMICILIO DEL ASEGURADO\n";
+	cout<<"\t"<<"DEPARTAMENTO: "<<us[a].domicilio.departamento<<endl;
+	cout<<"\t"<<"PROVINCIA: "<<us[a].domicilio.provincia<<endl;
+	cout<<"\t"<<"DISTRITO: "<<us[a].domicilio.distrito<<endl;
+	cout<<"\t"<<"DIRECCION: "<<us[a].domicilio.direcion<<endl;
+	cout<<"---------------------------------------------------------------\n";
+	system("pause");
+	system("cls");
+	return;
 }
 
 
