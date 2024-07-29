@@ -35,6 +35,8 @@ void verificardni(int dni);
 void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
+void menucitas(int a);
+void citas(int op);
 
 int main(){
     menu();
@@ -165,7 +167,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 3:
 				system("cls");
-				//citas();
+				menucitas(a);
 				break;
 			case 4:
 				system("cls");
@@ -242,4 +244,42 @@ void registrosds(int a){
 	system("cls");
 	return;
 
+}
+void menucitas(int a){
+	int op;
+	do{
+		system("cls");
+		cout<<"-----MENU DE ESPECIALIDADES-----"<<endl;
+		cout<<"1. Medicina general"<<endl;
+		cout<<"2. Odontologia"<<endl;
+		cout<<"3. Oftalmologia"<<endl;
+		cout<<"4. Psicologia"<<endl;
+		cout<<"5. Nutriologia"<<endl;
+		cout<<"6. Volver "<<endl;
+		cout<<"Seleccione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+				system("cls");
+				citas(op);
+				system("pause");
+				break;
+			case 6:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(op!=6);
+}
+void citas(int op){
+	string esp[5]={"Medicina general","Odontologia","Oftalmologia","Psicologia","Nutriologia"};
+	cout<<"Especialidad: "<<esp[op-1]<<endl;
+	cout<<"Fecha: "<<endl;
+	cout<<"Hora: "<<endl;
 }
