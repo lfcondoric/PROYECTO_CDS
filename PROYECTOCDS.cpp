@@ -2,6 +2,7 @@
 #include<unistd.h>
 #include<ctime>
 #include<string>
+#include<fstream>
 using namespace std;
 
 int a=0;//Variable global para determinar en que índice se encuentra almacenada los datos de los usuarios
@@ -37,6 +38,7 @@ void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
 void imprimir(int a);
+void servicios();
 
 int main(){
     menu();
@@ -167,7 +169,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 2:
 				system("cls");
-				//servicios();
+				servicios();
 				break;
 			case 3:
 				system("cls");
@@ -214,7 +216,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 2:
 				system("cls");
-				//servicios();
+				servicios();
 				break;
 			case 3:
 				system("cls");
@@ -354,4 +356,18 @@ void imprimir(int a){
 	return;
 }
 
-
+void servicios(){
+	ifstream archivo;
+	string imprimir;
+	
+	archivo.open("servicios.txt",ios::in);//Abrir el archivos en modo lectura
+	
+	while(!archivo.eof()){//Mientras no sea el final del archivo
+		getline(archivo, imprimir);
+		cout<<imprimir<<endl;
+	}
+	
+	archivo.close();
+	system("pause");
+	system("cls");
+}
