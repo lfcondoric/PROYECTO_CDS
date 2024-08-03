@@ -2,6 +2,7 @@
 #include<unistd.h>
 #include<ctime>
 #include<string>
+#include<fstream>
 using namespace std;
 
 int a=0;//Variable global para determinar en que índice se encuentra almacenada los datos de los usuarios
@@ -354,4 +355,6 @@ void imprimir(int a){
 	return;
 }
 
-
+void servicios(){
+	
+}
