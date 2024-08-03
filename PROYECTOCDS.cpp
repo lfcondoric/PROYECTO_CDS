@@ -38,7 +38,7 @@ void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
 void menucitas(int a);
-void citas(int op);
+void citas(int a,int op);
 void fecha();
 void imprimir(int a);
 void servicios();
@@ -223,7 +223,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 3:
 				system("cls");
-				//citas();
+				menucitas(a);
 				break;
 			case 4:
 				system("cls");
@@ -406,7 +406,7 @@ void menucitas(int a){
 			case 10:
 			case 11:
 				system("cls");
-				citas(op);
+				citas(a, op);
 				system("pause");
 				break;
 			case 0:
@@ -419,6 +419,21 @@ void menucitas(int a){
 		}
 	}while(op!=0);
 }
-void citas(int op){
-	
+void citas(int a,int op){
+	string S[11]={"Medicina general","Pediatria","Odontologia","Obstetricia","Ginecologia","Cardiologia","Oftalmologia","Radiologia","Neumologia","Psicologia","Nutricion"};
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"------------------CITA MEDICA------------------"<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"INFORMACION DEL PACIENTE"<<endl;
+	cout<<"\tNombres: "<<us[a].nombres<<endl;
+	cout<<"\tApellidos: "<<us[a].apellidos<<endl;
+	cout<<"\tDNI: "<<us[a].dni<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"INFORMACION DE LA CITA"<<endl;
+	cout<<"\tFecha: "<<endl;
+	cout<<"\tHora: "<<endl;
+	cout<<"\tMedico: "<<endl;
+	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
+	cout<<"\tConsultorio: "<<endl;
+	cout<<"-----------------------------------------------"<<endl;
 }
