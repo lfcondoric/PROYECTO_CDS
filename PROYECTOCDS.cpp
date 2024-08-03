@@ -38,6 +38,7 @@ void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
 void imprimir(int a);
+void servicios();
 
 int main(){
     menu();
@@ -168,7 +169,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 2:
 				system("cls");
-				//servicios();
+				servicios();
 				break;
 			case 3:
 				system("cls");
@@ -215,7 +216,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 2:
 				system("cls");
-				//servicios();
+				servicios();
 				break;
 			case 3:
 				system("cls");
@@ -357,4 +358,15 @@ void imprimir(int a){
 
 void servicios(){
 	
+	ifstream archivo;
+	string imprimir;
+	
+	archivo.open("texto.txt",ios::in);
+	
+	while(!archivo.eof()){
+		getline(archivo, imprimir);
+		cout<<imprimir<<endl;
+	}
+	
+	archivo.close();
 }
