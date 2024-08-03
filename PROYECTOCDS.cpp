@@ -360,7 +360,7 @@ void servicios(){
 	ifstream archivo;
 	string imprimir;
 	
-	archivo.open("texto.txt",ios::in);//Abrir el archivos en modo lectura
+	archivo.open("servicios.txt",ios::in);//Abrir el archivos en modo lectura
 	
 	while(!archivo.eof()){//Mientras no sea el final del archivo
 		getline(archivo, imprimir);
