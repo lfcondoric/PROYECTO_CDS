@@ -357,16 +357,17 @@ void imprimir(int a){
 }
 
 void servicios(){
-	
 	ifstream archivo;
 	string imprimir;
 	
-	archivo.open("texto.txt",ios::in);
+	archivo.open("texto.txt",ios::in);//Abrir el archivos en modo lectura
 	
-	while(!archivo.eof()){
+	while(!archivo.eof()){//Mientras no sea el final del archivo
 		getline(archivo, imprimir);
 		cout<<imprimir<<endl;
 	}
 	
 	archivo.close();
+	system("pause");
+	system("cls");
 }
