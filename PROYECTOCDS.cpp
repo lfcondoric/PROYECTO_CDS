@@ -37,6 +37,7 @@ void seguro(int a);
 void registrosds(int a);
 void menucitas(int a);
 void citas(int op);
+void fecha();
 
 int main(){
     menu();
@@ -249,13 +250,19 @@ void menucitas(int a){
 	int op;
 	do{
 		system("cls");
-		cout<<"-----MENU DE ESPECIALIDADES-----"<<endl;
+		cout<<"--------SERVICIOS---------"<<endl;
 		cout<<"1. Medicina general"<<endl;
-		cout<<"2. Odontologia"<<endl;
-		cout<<"3. Oftalmologia"<<endl;
-		cout<<"4. Psicologia"<<endl;
-		cout<<"5. Nutriologia"<<endl;
-		cout<<"6. Volver "<<endl;
+		cout<<"2. Pediatria"<<endl;
+		cout<<"3. Odontologia"<<endl;
+		cout<<"4. Obstetricia"<<endl;
+		cout<<"5. Ginecologia"<<endl;
+		cout<<"6. Cardiologia"<<endl;
+		cout<<"7. Oftalmologia"<<endl;
+		cout<<"8. Radiologia"<<endl;
+		cout<<"9. Neumologia"<<endl;
+		cout<<"10. Psicologia"<<endl;
+		cout<<"11. Nutricion"<<endl;
+		cout<<"0. Volver "<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -263,11 +270,17 @@ void menucitas(int a){
 			case 3:
 			case 4:
 			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
 				system("cls");
 				citas(op);
 				system("pause");
 				break;
-			case 6:
+			case 0:
 				system("cls");
 				return;
 				break;
@@ -275,11 +288,8 @@ void menucitas(int a){
 				system("cls");
 				break;
 		}
-	}while(op!=6);
+	}while(op!=0);
 }
 void citas(int op){
-	string esp[5]={"Medicina general","Odontologia","Oftalmologia","Psicologia","Nutriologia"};
-	cout<<"Especialidad: "<<esp[op-1]<<endl;
-	cout<<"Fecha: "<<endl;
-	cout<<"Hora: "<<endl;
+	
 }
