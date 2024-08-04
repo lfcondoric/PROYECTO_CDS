@@ -54,6 +54,7 @@ struct USUARIOS{
 
 }us[100];
 
+void mesdias(int ano, int mes);
 void calendario();
 void menu();
 void registro();
@@ -714,61 +715,73 @@ void citas(int a,int op, int e){
 		case 1:{
 			cout<<"-----------enero-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 3:{
 			cout<<"-----------marzo-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 4:{
 			cout<<"-----------abril-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 5:{
 			cout<<"------------mayo------------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 6:{
 			cout<<"-----------junio-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 7:{
 			cout<<"-----------julio-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 8:{
 			cout<<"-----------agosto-----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 9:{
 			cout<<"----------septiembre----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 10:{
 			cout<<"----------octubre----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 11:{
 			cout<<"----------noviembre----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 		case 12:{
 			cout<<"----------diciembre----------"<<endl;
 			calendario();
+			mesdias(ano,mes);
 		break;
 		}
 	}
@@ -1086,4 +1099,19 @@ void pedido(int a,int op,int m,int e){
 
 void calendario(){
 	cout<<" Lun Mar Mie Jue Vie Sab Dom"<<endl;
+}
+
+void mesdias(int ano, int mes){
+	int z= inimes(ano,mes);
+	for(int i=1;i<=z;i++){
+		cout<<"   ";
+	}
+	int diasMes=caldiames(ano,mes);
+	for(int dia=1; dia<=diasMes;dia++){
+		printf("%4d",dia);
+		if(z%7==0){
+			cout<<endl;
+		}
+		z=z+1;
+	}
 }
