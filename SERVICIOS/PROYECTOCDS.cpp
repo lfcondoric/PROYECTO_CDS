@@ -22,7 +22,7 @@ struct CITAS{
 	int fdia, dia, fmes, mes, fano, ano, dni;//<-- Los que f.... alamacenará la fecha actual en la que se solicito la cita. Dia,mes, ano es la fecha programada para la cita
 	string medico;
 	string especialidad;
-	string consultorio;
+	int consultorio;
 	string nombres;
 	string apellidos;
 };
@@ -68,6 +68,7 @@ void servicios();
 void menucitas(int a);
 void fecha(int a, int e);
 void citas(int a,int op, int e);
+void historialdeC(int a);
 void farmacia(int a);
 void antibioticos(int a,int op);
 void pedido(int a,int op,int m,int e);
@@ -642,7 +643,7 @@ void menucitas(int a){
 				break;
 			case 12:
 				system("cls");
-				system("pause");
+				historialdeC(a);
 				break;
 			case 0:
 				system("cls");
@@ -653,6 +654,37 @@ void menucitas(int a){
 				break;
 		}
 	}while(op!=0);
+}
+
+void historialdeC(int a){
+	if(us[a].i>0){
+		for(int i=1;i<=us[a].i;i++){
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"FECHA DE SOICITUD: "<<us[a].citas[i].fdia<<"/"<<us[a].citas[i].fmes<<"/"<<us[a].citas[i].fano<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"                  CITA MEDICA                  "<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"INFORMACION DEL PACIENTE"<<endl;
+		cout<<"\tNombres: "<<us[a].citas[i].nombres<<endl;
+		cout<<"\tApellidos: "<<us[a].citas[i].apellidos<<endl;
+		cout<<"\tDNI: "<<us[a].citas[i].dni<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"INFORMACION DE LA CITA"<<endl;
+		cout<<"\tFecha: "<<endl;
+		cout<<"\tHora: "<<endl;
+		cout<<"\tMedico: "<<endl;
+		cout<<"\tEspecialidad: "<<us[a].citas[i].especialidad<<endl;
+		cout<<"\tConsultorio: "<<us[a].citas[i].consultorio<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\n\n";
+	}
+		system("pause");
+		system("cls");
+	}else{
+		cout<<"NO HA HECHO CITAS RECIENTEMENTE\n";
+		system("pause");
+		system("cls");
+	}
 }
 
 void citas(int a,int op, int e){
