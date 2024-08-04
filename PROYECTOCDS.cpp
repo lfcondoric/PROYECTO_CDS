@@ -47,6 +47,7 @@ void fecha();
 void citas(int a,int op);
 void farmacia(int a);
 void antibioticos(int a,int op);
+void analgesicos(int a,int op);
 void pedido(int a,int op,int m);
 
 int main(){
@@ -604,7 +605,7 @@ void citas(int a,int op){
 	cout<<"\tHora: "<<endl;
 	cout<<"\tMedico: "<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
-	cout<<"\tConsultorio: "<<endl;
+	cout<<"\tConsultorio: "<<op<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 }
 
@@ -629,7 +630,7 @@ void farmacia(int a){
 					break;
 				case 2:
 					system("cls");
-					//analgecicos();
+					analgecicos();
 					break;
 				case 3:
 					system("cls");
@@ -672,6 +673,37 @@ void antibioticos(int a,int op){
 		cout<<"2. Ceftriaxona"<<endl;
 		cout<<"3. Vancomicina"<<endl;			
 		cout<<"4. Ciprofloxacina"<<endl;
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+void analgesicos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"--------------ANALGESICOS-------------"<<endl;
+		cout<<"1. Parecetamol"<<endl;
+		cout<<"2. Ibuprofeno"<<endl;
+		cout<<"3. Morfina"<<endl;			
+		cout<<"4. Tramadol"<<endl;
 		cout<<"0. Salir"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
