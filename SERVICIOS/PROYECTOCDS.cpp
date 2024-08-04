@@ -468,7 +468,7 @@ void servicios(){
 		switch(op){
 			case 1:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\medicinageneral.txt",ios::in);//Abrir el archivo en modo lectura
+				archivos.open("medicinageneral.txt",ios::in);//Abrir el archivo en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -480,7 +480,7 @@ void servicios(){
 				break;
 			case 2:
 				system("cls");
-					archivos.open("d:\\fp\\proyecto_cds\\servicios\\pediatria.txt",ios::in);//Abrir el archivos en modo lectura
+					archivos.open("pediatria.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -491,7 +491,7 @@ void servicios(){
 				break;
 			case 3:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\odontologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("odontologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
  	  				getline(archivos,texto);
 					cout<<texto<<endl;
@@ -502,7 +502,7 @@ void servicios(){
 				break;
 			case 4:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\obstetricia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("obstetricia.txt",ios::in);//Abrir el archivos en modo lectura
   				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -513,7 +513,7 @@ void servicios(){
 				break;
 			case 5:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\ginecologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("ginecologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -524,7 +524,7 @@ void servicios(){
 				break;
 			case 6:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\cardiologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("cardiologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -535,7 +535,7 @@ void servicios(){
 				break;
 			case 7:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\oftalmologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("oftalmologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -546,7 +546,7 @@ void servicios(){
 				break;
 			case 8:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\radiologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("radiologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -557,7 +557,7 @@ void servicios(){
 				break;
 			case 9:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\neumologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("neumologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -568,7 +568,7 @@ void servicios(){
 				break;
 			case 10:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\psicologia.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("psicologia.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
@@ -579,7 +579,7 @@ void servicios(){
 				break;
 			case 11:
 				system("cls");
-				archivos.open("d:\\fp\\proyecto_cds\\servicios\\nutricion.txt",ios::in);//Abrir el archivos en modo lectura
+				archivos.open("nutricion.txt",ios::in);//Abrir el archivos en modo lectura
 				while(!archivos.eof()){//Mientras no sea el final del archivo
 					getline(archivos,texto);
 					cout<<texto<<endl;
