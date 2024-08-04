@@ -37,11 +37,13 @@ void verificardni(int dni);
 void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
-void menucitas(int a);
-void citas(int a,int op);
-void fecha();
 void imprimir(int a);
 void servicios();
+void menucitas(int a);
+void fecha();
+void citas(int a,int op);
+void farmacia(int a);
+void antibioticos();
 
 int main(){
     menu();
@@ -180,7 +182,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 4:
 				system("cls");
-				//farmacia();
+				farmacia(a);
 				break;
 			case 5:
 				system("cls");
@@ -227,7 +229,7 @@ void menu2(int a){//Segundo Menu principal
 				break;
 			case 4:
 				system("cls");
-				//farmacia();
+				farmacia(a);
 				break;
 			case 5:
 				system("cls");
@@ -436,4 +438,83 @@ void citas(int a,int op){
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
 	cout<<"\tConsultorio: "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
+}
+void farmacia(int a){
+	int op;
+	if(us[a].menperso==1){
+		do{
+			system("cls");
+			cout<<"-------------MEDICAMENTOS-------------"<<endl;
+			cout<<"1. Antiobioticos"<<endl;
+			cout<<"2. Analgecicos y Antiinflamatorias"<<endl;
+			cout<<"3. Anestesicos"<<endl;
+			cout<<"4. Anticoagulantes"<<endl;
+			cout<<"5. Antihipertensivos"<<endl;
+			cout<<"0. Salir"<<endl;
+			cout<<"--------------------------------------"<<endl;
+			cout<<"Seleccione una opcion: ";cin>>op;
+			switch(op){
+				case 1:
+					system("cls");
+					antibioticos();
+					break;
+				case 2:
+					system("cls");
+					//analgecicos();
+					break;
+				case 3:
+					system("cls");
+					//anestesicos();
+					break;
+				case 4:
+					system("cls");
+					//anticoagulantes();
+					break;
+				case 5:
+					system("cls");
+					//antihipertensivos();
+					break;
+				case 0:
+					system("cls");
+					return;
+					break;
+				default:
+					system("cls");
+					break;
+			}
+		}while(op=!0);
+	}else{
+		cout<<"Necesita estar registrado en el SDS."<<endl;
+		return;
+	}
+}
+void antibioticos(){
+	int op;
+	do{
+		system("cls");
+		cout<<"-------------ANTIBIOTICOS------------"<<endl;
+		cout<<"1. Amoxicilina"<<endl;
+		cout<<"2. Ceftriaxona"<<endl;
+		cout<<"3. Anestesicos"<<endl;			
+		cout<<"4. Ciprofloxacina"<<endl;
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				system("cls");
+				//pedido();
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(op=!0);
 }
