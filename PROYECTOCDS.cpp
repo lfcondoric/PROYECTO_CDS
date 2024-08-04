@@ -70,6 +70,7 @@ void citas(int a,int op);
 void farmacia(int a);
 void antibioticos(int a,int op);
 void pedido(int a,int op,int m,int e);
+void historialdeP(int a);
 
 int main(){
     menu();
@@ -668,7 +669,7 @@ void farmacia(int a){
 					break;
 				case 6:
 					system("cls");
-					//historial();
+					historialdeP(a);
 					break;
 				case 0:
 					system("cls");
@@ -689,7 +690,21 @@ void farmacia(int a){
 	}
 }
 
-
+void historialdeP(int a){
+	for(int i=0;i<us[a].x;i++){
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\tPACIENTE: "<<us[a].medicamentos[i].nombres<<" "<<us[a].medicamentos[i].apellido<<endl;
+		cout<<"\tEDAD: "<<us[a].medicamentos[i].edad<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\tFECHA: "<<us[a].medicamentos[i].dia<<"/"<<us[a].medicamentos[i].mes<<"/"<<us[a].medicamentos[i].ano<<endl;
+		cout<<"\t"<<us[a].medicamentos[i].tanti<<": "<<us[a].medicamentos[i].tmedi<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+	}
+	system("pause");
+	system("cls");
+}
 
 void antibioticos(int a,int op){
 	int m;
