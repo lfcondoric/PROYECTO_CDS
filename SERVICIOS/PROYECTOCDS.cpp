@@ -218,7 +218,6 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"2. Servicios que brinda\n";
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
-		cout<<"5. Notificaciones\n";
 		cout<<"0. Cerrar Sesion\n";
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
@@ -239,10 +238,6 @@ void menu2(int a){//Segundo Menu principal
 			case 4:
 				system("cls");
 				farmacia(a);
-				break;
-			case 5:
-				system("cls");
-				//notificaciones();
 				break;
 			case 0:
 				cout<<"Cerrando sesion";
@@ -269,7 +264,6 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"2. Servicios que brinda\n";
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
-		cout<<"5. Notificaciones\n";
 		cout<<"0. Cerrar Sesion\n";
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
@@ -289,10 +283,6 @@ void menu2(int a){//Segundo Menu principal
 			case 4:
 				system("cls");
 				farmacia(a);
-				break;
-			case 5:
-				system("cls");
-				//notificaciones();
 				break;
 			case 0:
 				cout<<"Cerrando sesion";
