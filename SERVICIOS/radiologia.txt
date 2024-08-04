@@ -1,0 +1,42 @@
+La radiologia ofrece una amplia gama de servicios enfocados en el diagnostico y la evaluacion de enfermedades y lesiones a traves de diversas tecnicas de imagen. 
+Los servicios que brinda la radiologia:
+
+1. Radiografia Convencional:
+   - Radiografias de Torax
+   - Radiografias Oseas
+   - Radiografias Abdominales
+
+2. Tomografia Computarizada (TC):
+   - TC de Cabeza
+   - TC Toracica
+   - TC Abdominal y Pelvica
+
+3. Resonancia Magnetica (RM):
+   - RM del Cerebro
+   - RM de Columna Vertebral
+   - RM Articular y Muscular
+
+4. Ecografia (Ultrasonido):
+   - Ecografia Abdominal
+   - Ecografia Obstetrica
+   - Ecografia de Tiroides y Glándulas
+
+5. Medicina Nuclear:
+   - Gammagrafia
+   - PET (Tomografia por Emision de Positrones)
+
+6. Radiologia Intervencionista:
+   - Biopsias Guiadas por Imagen
+   - Procedimientos Minimante Invasivos
+
+7. Mamografia:
+   - Mamografia de Cribado
+   - Mamografia Diagnostica
+
+8. Densitometria Osea:
+   - Medicion de la Densidad Oseaa incluyen:
+
+ESPECIALISTA(S):
+
+	- Dr. JOSE MIGUEL CONDORI GABRIEL
+		Egresado de la UNJBG, con mas de 23 anos de experiencia.
