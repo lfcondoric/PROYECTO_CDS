@@ -48,6 +48,7 @@ struct USUARIOS{
 	MEDI medicamentos[100];
 	int menperso = 0;//Menu perzonalizado
 	int x = 0;
+	int e = 0;//<-- Ayuda a almacenar los medicamentos en orden
 
 }us[100];
 
@@ -67,7 +68,7 @@ void fecha();
 void citas(int a,int op);
 void farmacia(int a);
 void antibioticos(int a,int op);
-void pedido(int a,int op,int m);
+void pedido(int a,int op,int m,int e);
 
 int main(){
     menu();
@@ -700,7 +701,7 @@ void antibioticos(int a,int op){
 			case 3:
 			case 4:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m, us[a].x);
 				system("pause");
 				break;
 			case 0:
@@ -728,8 +729,7 @@ void fecha(){
             << (tm_ptr->tm_year + 1900) << endl;
 }
 
-void pedido(int a,int op,int m){
-	int e=0;
+void pedido(int a,int op,int m,int e){
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
 	string AB[4]={"Amoxicilina","Ceftriaxona","Vancomicina","Ciprofloxacina"};
 	cout<<"-----------------------------------------------"<<endl;
@@ -747,4 +747,5 @@ void pedido(int a,int op,int m){
 		us[a].medicamentos[e].tmedi=AB[m-1];
 	cout<<"-----------------------------------------------"<<endl;
 	e++;
+	us[a].x=e;
 }
