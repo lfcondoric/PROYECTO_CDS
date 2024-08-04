@@ -54,6 +54,7 @@ struct USUARIOS{
 
 }us[100];
 
+int caldiames(int ano,int mes);
 void mesdias(int ano, int mes);
 void calendario();
 void menu();
@@ -1114,4 +1115,24 @@ void mesdias(int ano, int mes){
 		}
 		z=z+1;
 	}
+}
+
+int caldiames(int ano,int mes){
+	if(mes==1||mes==3||mes==5||mes==6||mes==8||mes==10||mes==12){
+		return 31;
+	}
+	else{
+		if(mes==2){
+			if((ano%4==0)||(ano%100==0 && ano%400==0)){
+				return 29;
+			}
+			else{
+				return 28;
+			}
+		}
+		else{
+			return 30;
+		}
+	}
+
 }
