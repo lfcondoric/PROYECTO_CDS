@@ -40,6 +40,15 @@ struct nocit{
 	int daes[5];
 };
 
+struct mestarma{
+	tarmas mesit[31];
+};
+
+struct tarmas{
+	char manana[6];
+	char tardd[6];
+};
+
 struct USUARIOS{
 	
 	int dni;
@@ -87,6 +96,8 @@ void anticoagulantes(int a,int op);
 void antihipertensivos(int a,int op);
 void pantalla(int tur,string doc,int mes,int dia);
 
+int tope=1;
+mestarma mec[12];
 
 int main(){
 	nocit mecit[12];
@@ -703,9 +714,9 @@ void citas(int a,int op, int e){
     // Guardar la fecha en formato "dd/mm/aaaa"
 	us[a].citas[e].fdia=(tm_ptr->tm_mday);
  	us[a].citas[e].fmes=(tm_ptr->tm_mon + 1);
-	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);     //año actual
+	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);   
 
-	int ano,mes;
+	int ano,mes,dia,tur,horita,xu,act,oct;
 	ano=(tm_ptr->tm_year + 1900);
 	mes=(tm_ptr->tm_mon + 1);
 
