@@ -693,7 +693,11 @@ void citas(int a,int op, int e){
     // Guardar la fecha en formato "dd/mm/aaaa"
 	us[a].citas[e].fdia=(tm_ptr->tm_mday);
  	us[a].citas[e].fmes=(tm_ptr->tm_mon + 1);
-	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);
+	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);     //año actual
+
+	int ano,mes;
+	ano=(tm_ptr->tm_year + 1900);
+	mes=(tm_ptr->tm_mon + 1);
 
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"                  CITA MEDICA                  "<<endl;
@@ -705,9 +709,59 @@ void citas(int a,int op, int e){
 	us[a].citas[e].apellidos=us[a].apellidos;
 	cout<<"\tDNI: "<<us[a].dni<<endl;
 	us[a].citas[e].dni=us[a].dni;
+	switch(mes){
+		case 1:{
+
+		break;
+		}
+		case 2:{
+			
+		break;
+		}
+		case 3:{
+			
+		break;
+		}
+		case 4:{
+			
+		break;
+		}
+		case 5:{
+			
+		break;
+		}
+		case 6:{
+			
+		break;
+		}
+		case 7:{
+			
+		break;
+		}
+		case 8:{
+			
+		break;
+		}
+		case 9:{
+			
+		break;
+		}
+		case 10:{
+			
+		break;
+		}
+		case 11:{
+			
+		break;
+		}
+		case 12:{
+			
+		break;
+		}
+	}
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DE LA CITA"<<endl;
-	cout<<"\tFecha: "<<endl;
+	cout<<"\tFecha: "<<endl;   
 	cout<<"\tHora: "<<endl;
 	cout<<"\tMedico: "<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
