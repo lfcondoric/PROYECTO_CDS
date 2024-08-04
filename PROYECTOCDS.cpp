@@ -27,6 +27,7 @@ struct USUARIOS{
 	FECHA nacimiento;
 	DOMI domicilio;
 	int menperso = 0;//Menú perzonalizado
+	int x = 0;
 }us[100];
 
 void menu();
@@ -143,9 +144,17 @@ void verificardni(int dni){
 	for(int i=0;i<100;i++){//Verificar si el dni esta registrado
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
-			menu2(i);//<-- si se cumple el if llamaría a la función señalada
+			while(true){
+			if(us[i].menperso==0){ //<-- Cuando el usuario no se haya registrado al SDS
+				menu2(i);//<-- si se cumple el if llamaría a la función señalada
+			}
 			if(us[i].menperso==1){//<-- Este if funcionara cuando vuelva del registro al SDS, para abrir un menu perzonalizado
-			menu2(i);				
+				menu2(i);				
+			}
+			if(us[i].x==1){
+			break;//<- cuando us[i].x sea igual a 1 el bucle rompera, permitiendo cerrar sesión de forma correcta
+			us[i].x=0;
+			}
 			}
 			return;
 		}
@@ -197,6 +206,7 @@ void menu2(int a){//Segundo Menu principal
             		cout<<".";
             	sleep(1);
 				}
+				us[a].x=1;
 				system("cls");
 				return;
 				break;
@@ -244,6 +254,7 @@ void menu2(int a){//Segundo Menu principal
             		cout<<".";
             	sleep(1);
 				}
+				us[a].x=1;
 				system("cls");
 				return;
 				break;
@@ -264,7 +275,7 @@ void seguro(int a){
 	if(us[a].menperso==0){//Este if tiene como función imprimir el menú indicado para el usuario
 		do{
 			cout<<"1. Continuar con el registro\n";
-			cout<<"2. Beneficios e informacion sobre el SDS\n";
+			cout<<"2. Informacion sobre el SDS\n";
 			cout<<"3. Volver\n";
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
@@ -289,7 +300,7 @@ void seguro(int a){
 	}else{
 		do{
 			cout<<"1. Imprimir ficha de registro\n";
-			cout<<"2. Beneficios e informacion sobre el SDS\n";
+			cout<<"2. Informacion sobre el SDS\n";
 			cout<<"3. Volver\n";
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
@@ -299,7 +310,7 @@ void seguro(int a){
 					break;
 				case 2:
 					system("cls");
-					//info();
+					info();
 					break;
 				case 3:
 					system("cls");
@@ -314,7 +325,17 @@ void seguro(int a){
 }
 
 void info(){
+	ifstream info;
+	string texto;
 	
+	info.open("texto.txt",ios::in);//Abrir el archivos en modo lectura
+	while(!info.eof()){//Mientras no sea el final del archivo
+		getline(info,texto);
+		cout<<texto<<endl;
+	}
+	info.close();
+	system("pause");
+	system("cls");
 }
 
 void registrosds(int a){
