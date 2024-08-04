@@ -144,7 +144,9 @@ void verificardni(int dni){
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
 			menu2(i);//<-- si se cumple el if llamaría a la función señalada
-			menu2(i);
+			if(us[i].menperso==1){//<-- Este if funcionara cuando vuelva del registro al SDS, para abrir un menu perzonalizado
+			menu2(i);				
+			}
 			return;
 		}
 	}
@@ -165,13 +167,13 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
-		cout<<"0. Cerrar Sesión\n";
+		cout<<"0. Cerrar Sesion\n";
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
 				seguro(a);
-				return;
+				return; //<-- retornara hacia la funcion verificar dni
 				break;
 			case 2:
 				system("cls");
@@ -213,7 +215,7 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
-		cout<<"0. Cerrar Sesión\n";
+		cout<<"0. Cerrar Sesion\n";
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -363,19 +365,156 @@ void imprimir(int a){
 }
 
 void servicios(){
-	ifstream archivo;
-	string imprimir;
-	
-	archivo.open("servicios.txt",ios::in);//Abrir el archivos en modo lectura
-	
-	while(!archivo.eof()){//Mientras no sea el final del archivo
-		getline(archivo, imprimir);
-		cout<<imprimir<<endl;
-	}
-	
-	archivo.close();
-	system("pause");
-	system("cls");
+	int op;
+	do{
+		ifstream archivos;
+		string texto;
+		cout<<"--------SERVICIOS---------"<<endl;
+		cout<<"1. Medicina general"<<endl;
+		cout<<"2. Pediatria"<<endl;
+		cout<<"3. Odontologia"<<endl;
+		cout<<"4. Obstetricia"<<endl;
+		cout<<"5. Ginecologia"<<endl;
+		cout<<"6. Cardiologia"<<endl;
+		cout<<"7. Oftalmologia"<<endl;
+		cout<<"8. Radiologia"<<endl;
+		cout<<"9. Neumologia"<<endl;
+		cout<<"10. Psicologia"<<endl;
+		cout<<"11. Nutricion"<<endl;
+		cout<<"0. Volver "<<endl;
+		cout<<"Seleccione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\medicinageneral.txt",ios::in);//Abrir el archivo en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 2:
+				system("cls");
+					archivos.open("d:\\fp\\proyecto_cds\\servicios\\pediatria.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 3:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\odontologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+ 	  				getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 4:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\obstetricia.txt",ios::in);//Abrir el archivos en modo lectura
+  				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 5:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\ginecologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 6:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\cardiologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 7:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\oftalmologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 8:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\radiologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 9:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\neumologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 10:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\psicologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 11:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\nutricion.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(op!=0);
 }
 
 void menucitas(int a){
