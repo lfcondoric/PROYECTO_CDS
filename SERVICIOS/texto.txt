@@ -1,7 +1,7 @@
 _________________________________________________________________
 |   ¿QUE ES EL SEGURO DE SALUD - SDS?				|	
 |	El SDS es un seguro de salud dirigido para todos	|
-|	los peruanos y extranjeros residentes en el Perú	|	
+|	los peruanos y extranjeros residentes en el Peru	|	
 |	que no cuenten con otro seguro de salud			|
 |	vigente.						|		
 |								|
@@ -9,13 +9,13 @@ _________________________________________________________________
 |	Esencial de Aseguramiento en Salud (PEAS).		|	
 |								|
 |   ¿QUE ES EL PEAS?						|
-|	Es el Plan Mínimo de Salud				|
+|	Es el Plan Minimo de Salud				|
 |	que debe tener un residente				|
 |	en el Peru.						|	
 |								|
 |	Tiene el proposito de reducir las barreras de		|
 |	acceso al sistema de salud, garantizando el		|
-|	derecho a la atención de salud de toda la		|	
+|	derecho a la atencion de salud de toda la		|	
 |	poblacion.						|
 |								|
 |   ¿QUE CUBRE EL SDS?						|	
