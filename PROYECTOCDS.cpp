@@ -36,6 +36,7 @@ void iniciosesion();
 void verificardni(int dni);
 void menu2(int a);
 void seguro(int a);
+void info();
 void registrosds(int a);
 void imprimir(int a);
 void servicios();
@@ -274,7 +275,7 @@ void seguro(int a){
 					break;
 				case 2:
 					system("cls");
-					//info();
+					info();
 					break;
 				case 3:
 					system("cls");
@@ -310,6 +311,10 @@ void seguro(int a){
 			}
 	}while(op!=2);
 	}
+}
+
+void info(){
+	
 }
 
 void registrosds(int a){
@@ -560,6 +565,7 @@ void menucitas(int a){
 		}
 	}while(op!=0);
 }
+
 void citas(int a,int op){
 	string S[11]={"Medicina general","Pediatria","Odontologia","Obstetricia","Ginecologia","Cardiologia","Oftalmologia","Radiologia","Neumologia","Psicologia","Nutricion"};
 	cout<<"-----------------------------------------------"<<endl;
@@ -578,6 +584,7 @@ void citas(int a,int op){
 	cout<<"\tConsultorio: "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 }
+
 void farmacia(int a){
 	int op;
 	if(us[a].menperso==1){
@@ -627,6 +634,7 @@ void farmacia(int a){
 		return;
 	}
 }
+
 void antibioticos(){
 	int op;
 	do{
