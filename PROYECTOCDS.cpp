@@ -362,19 +362,65 @@ void imprimir(int a){
 }
 
 void servicios(){
-	ifstream archivo;
-	string imprimir;
-	
-	archivo.open("servicios.txt",ios::in);//Abrir el archivos en modo lectura
-	
-	while(!archivo.eof()){//Mientras no sea el final del archivo
-		getline(archivo, imprimir);
-		cout<<imprimir<<endl;
-	}
-	
-	archivo.close();
-	system("pause");
-	system("cls");
+	int op;
+	do{
+		cout<<"--------SERVICIOS---------"<<endl;
+		cout<<"1. Medicina general"<<endl;
+		cout<<"2. Pediatria"<<endl;
+		cout<<"3. Odontologia"<<endl;
+		cout<<"4. Obstetricia"<<endl;
+		cout<<"5. Ginecologia"<<endl;
+		cout<<"6. Cardiologia"<<endl;
+		cout<<"7. Oftalmologia"<<endl;
+		cout<<"8. Radiologia"<<endl;
+		cout<<"9. Neumologia"<<endl;
+		cout<<"10. Psicologia"<<endl;
+		cout<<"11. Nutricion"<<endl;
+		cout<<"0. Volver "<<endl;
+		cout<<"Seleccione una opcion: ";cin>>op;
+		switch(op){
+			case 1:
+				system("cls");
+				break;
+			case 2:
+				system("cls");
+				break;
+			case 3:
+				system("cls");
+				break;
+			case 4:
+				system("cls");
+				break;
+			case 5:
+				system("cls");
+				break;
+			case 6:
+				system("cls");
+				break;
+			case 7:
+				system("cls");
+				break;
+			case 8:
+				system("cls");
+				break;
+			case 9:
+				system("cls");
+				break;
+			case 10:
+				system("cls");
+				break;
+			case 11:
+				system("cls");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(op!=0);
 }
 
 void menucitas(int a){
