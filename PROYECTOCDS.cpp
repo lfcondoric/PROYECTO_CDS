@@ -71,6 +71,11 @@ void farmacia(int a);
 void antibioticos(int a,int op);
 void pedido(int a,int op,int m,int e);
 void historialdeP(int a);
+void analgesicos(int a,int op);
+void anestesicos(int a,int op);
+void anticoagulantes(int a,int op);
+void antihipertensivos(int a,int op);
+
 
 int main(){
     menu();
@@ -653,19 +658,19 @@ void farmacia(int a){
 					break;
 				case 2:
 					system("cls");
-					//analgecicos();
+					analgesicos(a,op);
 					break;
 				case 3:
 					system("cls");
-					//anestesicos();
+					anestesicos(a,op);
 					break;
 				case 4:
 					system("cls");
-					//anticoagulantes();
+					anticoagulantes(a,op);
 					break;
 				case 5:
 					system("cls");
-					//antihipertensivos();
+					antihipertensivos(a,op);
 					break;
 				case 6:
 					system("cls");
@@ -686,6 +691,7 @@ void farmacia(int a){
 			cout<<".";
 			sleep(1);
 		}
+		cout<<endl;
 		return;
 	}
 }
@@ -745,6 +751,128 @@ void antibioticos(int a,int op){
 	}while(m!=0);
 }
 
+void analgesicos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"--------------ANALGESICOS-------------"<<endl;
+		cout<<"1. Parecetamol"<<endl;
+		cout<<"2. Ibuprofeno"<<endl;
+		cout<<"3. Morfina"<<endl;			
+		cout<<"4. Tramadol"<<endl;
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+
+void anestesicos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"--------------ANESTESICOS-------------"<<endl;
+		cout<<"1. Lidocaina"<<endl;
+		cout<<"2. Propofol"<<endl;
+		cout<<"3. Midazolam"<<endl;			
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+
+void anticoagulantes(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"------------ANTICOAGULANTES----------"<<endl;
+		cout<<"1. Heparina"<<endl;
+		cout<<"2. Warfarina"<<endl;
+		cout<<"3. Enoxaparina"<<endl;			
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+
+void antihipertensivos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"-----------ANTIHIPERTENSIVOS----------"<<endl;
+		cout<<"1. Lisinopril"<<endl;
+		cout<<"2. Losartan"<<endl;
+		cout<<"3. Metroprolol"<<endl;			
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+
 void fecha(int a, int e){
 	// Obtener el tiempo actual
     time_t t = time(0);
@@ -764,7 +892,18 @@ void fecha(int a, int e){
 
 void pedido(int a,int op,int m,int e){
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
-	string AB[4]={"Amoxicilina","Ceftriaxona","Vancomicina","Ciprofloxacina"};
+	string AB[4];
+	if(op==1){
+		AB[0]="Amoxicilina"; AB[1]="Ceftriaxona"; AB[2]="Vancomicina"; AB[3]="Ciprofloxacina";
+	} else if(op==2){
+		AB[0]="Paracetamol"; AB[1]="Ibuprofeno"; AB[2]="Morfina"; AB[3]="Tramadol";
+	} else if(op==3){
+		AB[0]="Lidocaina"; AB[1]="Propofol"; AB[2]="Midazolam";
+	} else if(op==4){
+		AB[0]="Heparina"; AB[1]="Warfarina"; AB[2]="Enoxaparina";
+	} else if(op==5){
+		AB[0]="Lisinopril"; AB[1]="Losartán"; AB[2]="Metoprolol";
+	}
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
 	cout<<"-----------------------------------------------"<<endl;
