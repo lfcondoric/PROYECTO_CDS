@@ -18,7 +18,25 @@ struct DOMI{
 	string direcion;
 };
 
+struct CITAS{
+	int dia;
+	int mes;
+	int ano;
+	string medico;
+	string especialidad;
+	string consultorio;
+};
+
+struct MEDI{
+	string nombres;
+	string apellido;
+	int edad;
+	string tanti;
+	string tmedi;
+};
+
 struct USUARIOS{
+	
 	int dni;
 	string nombres;
 	string apellidos;
@@ -26,6 +44,8 @@ struct USUARIOS{
 	char sexo[20];
 	FECHA nacimiento;
 	DOMI domicilio;
+	CITAS citas[100];
+	MEDI medicamentos[100];
 	int menperso = 0;//Menu perzonalizado
 	int x = 0;
 
@@ -604,7 +624,7 @@ void citas(int a,int op){
 	cout<<"\tHora: "<<endl;
 	cout<<"\tMedico: "<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
-	cout<<"\tConsultorio: "<<endl;
+	cout<<"\tConsultorio: "<<op<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 }
 
@@ -693,6 +713,7 @@ void antibioticos(int a,int op){
 		}
 	}while(m!=0);
 }
+
 void fecha(){
 	// Obtener el tiempo actual
     time_t t = time(0);
@@ -706,16 +727,24 @@ void fecha(){
             << (tm_ptr->tm_mon + 1) << "/"
             << (tm_ptr->tm_year + 1900) << endl;
 }
+
 void pedido(int a,int op,int m){
+	int e=0;
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
 	string AB[4]={"Amoxicilina","Ceftriaxona","Vancomicina","Ciprofloxacina"};
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"\tPACIENTE: "<<us[a].nombres<<" "<<us[a].apellidos<<endl;
+		us[a].medicamentos[e].nombres=us[a].nombres;
+		us[a].medicamentos[e].apellido=us[a].apellidos;
 	cout<<"\tEDAD: "<<us[a].edad<<endl;
+		us[a].medicamentos[e].edad=us[a].edad;
 	cout<<"-----------------------------------------------"<<endl;
 	fecha();
 	cout<<"\t"<<MD[op-1]<<": "<<AB[m-1]<<endl;
+		us[a].medicamentos[e].tanti=MD[op-1];
+		us[a].medicamentos[e].tmedi=AB[m-1];
 	cout<<"-----------------------------------------------"<<endl;
+	e++;
 }
