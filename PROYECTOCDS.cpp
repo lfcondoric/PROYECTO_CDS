@@ -464,6 +464,7 @@ void servicios(){
 		cout<<"10. Psicologia"<<endl;
 		cout<<"11. Nutricion"<<endl;
 		cout<<"0. Volver "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -600,7 +601,7 @@ void servicios(){
 }
 
 void menucitas(int a){
-	int op;
+	int op;//menu para elegir el tipo de servicio para la cita
 	do{
 		system("cls");
 		cout<<"-----------------------------------"<<endl;
@@ -680,7 +681,7 @@ void farmacia(int a){
 			cout<<"4. Anticoagulantes"<<endl;
 			cout<<"5. Antihipertensivos"<<endl;
 			cout<<"6. HISTORIAL DE PEDIDOS"<<endl;
-			cout<<"0. Salir"<<endl;
+			cout<<"0. Volver"<<endl;
 			cout<<"--------------------------------------"<<endl;
 			cout<<"Seleccione una opcion: ";cin>>op;
 			switch(op){
@@ -763,7 +764,7 @@ void antibioticos(int a,int op){
 		cout<<"2. Ceftriaxona"<<endl;
 		cout<<"3. Vancomicina"<<endl;			
 		cout<<"4. Ciprofloxacina"<<endl;
-		cout<<"0. Salir"<<endl;
+		cout<<"0. Volver"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
 		switch(m){
@@ -797,7 +798,7 @@ void analgesicos(int a,int op){
 		cout<<"2. Ibuprofeno"<<endl;
 		cout<<"3. Morfina"<<endl;			
 		cout<<"4. Tramadol"<<endl;
-		cout<<"0. Salir"<<endl;
+		cout<<"0. Volver"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
 		switch(m){
@@ -830,7 +831,7 @@ void anestesicos(int a,int op){
 		cout<<"1. Lidocaina"<<endl;
 		cout<<"2. Propofol"<<endl;
 		cout<<"3. Midazolam"<<endl;			
-		cout<<"0. Salir"<<endl;
+		cout<<"0. Volver"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
 		switch(m){
@@ -862,7 +863,7 @@ void anticoagulantes(int a,int op){
 		cout<<"1. Heparina"<<endl;
 		cout<<"2. Warfarina"<<endl;
 		cout<<"3. Enoxaparina"<<endl;			
-		cout<<"0. Salir"<<endl;
+		cout<<"0. Volver"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
 		switch(m){
@@ -894,7 +895,7 @@ void antihipertensivos(int a,int op){
 		cout<<"1. Lisinopril"<<endl;
 		cout<<"2. Losartan"<<endl;
 		cout<<"3. Metroprolol"<<endl;			
-		cout<<"0. Salir"<<endl;
+		cout<<"0. Volver"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
 		switch(m){
@@ -935,7 +936,7 @@ void fecha(int a, int e){
 
 void pedido(int a,int op,int m,int e){
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
-	string AB[4];
+	string AB[4];//Arreglo segun el tipo de medicamento elegido
 	if(op==1){
 		AB[0]="Amoxicilina"; AB[1]="Ceftriaxona"; AB[2]="Vancomicina"; AB[3]="Ciprofloxacina";
 	} else if(op==2){
