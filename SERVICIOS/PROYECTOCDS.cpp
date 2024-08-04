@@ -717,72 +717,357 @@ void citas(int a,int op, int e){
 			cout<<"-----------enero-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
-		break;
-		}
+			cout<<endl;
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
-			mesdias(ano,mes);
+			mesdias(ano,mes);do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 3:{
 			cout<<"-----------marzo-----------"<<endl;
 			calendario();
-			mesdias(ano,mes);
+			mesdias(ano,mes);do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 4:{
 			cout<<"-----------abril-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 5:{
 			cout<<"------------mayo------------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 6:{
 			cout<<"-----------junio-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 7:{
 			cout<<"-----------julio-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 8:{
 			cout<<"-----------agosto-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 9:{
 			cout<<"----------septiembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 10:{
 			cout<<"----------octubre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 11:{
 			cout<<"----------noviembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 		case 12:{
 			cout<<"----------diciembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			do{
+			cout<<"elige un dia para tu cita: "<<endl;
+			cin>>dia;
+			int z = inimes(ano,mes);
+			int i=1;
+			int diasMes=caldiames(ano,mes);
+			for(int de=1; de<=diasMes;de++){
+				if(z%7==0){
+					mecit[mes].daes[i]=de;
+					i=i+1;
+				}
+				z=z+1;
+			}
+			cout<<endl;
+			cout<<endl;
+			for(int e=1;e<=5;e++){
+				if(dia==mecit[mes].daes[e]){
+					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
+					act=act+1;
+				}
+			}
+			oct=oct+1;
+			}while(oct!=act);
 		break;
 		}
 	}
