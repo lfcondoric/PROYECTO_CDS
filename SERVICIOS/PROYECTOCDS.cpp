@@ -34,6 +34,7 @@ struct MEDI{
 	string tanti;
 	string tmedi;
 	int unidades;
+	int hora,minuto,segundo;
 	int dia, mes, ano;
 };
 
@@ -789,13 +790,15 @@ void farmacia(int a){
 void historialdeP(int a){
 	if(us[a].e>0){
 		cout<<"-----------------------------------------------"<<endl;
-		cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
+		cout<<"FECHA: "<<us[a].medicamentos[1].dia<<"/"<<us[a].medicamentos[1].mes<<"/"<<us[a].medicamentos[1].ano<<endl;
 		cout<<"-----------------------------------------------"<<endl;
-		cout<<"\tPACIENTE: "<<us[a].medicamentos[1].nombres<<" "<<us[a].medicamentos[1].apellido<<endl;
-		cout<<"\tEDAD: "<<us[a].medicamentos[1].edad<<endl;
+		cout<<"PACIENTE: "<<us[a].medicamentos[1].nombres<<" "<<us[a].medicamentos[1].apellido<<endl;
+		cout<<"EDAD: "<<us[a].medicamentos[1].edad<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"             PEDIDO DE MEDICAMENTO             "<<endl;
 		cout<<"-----------------------------------------------"<<endl;
 	for(int i=1;i<=us[a].e;i++){
-		cout<<"\tFECHA: "<<us[a].medicamentos[i].dia<<"/"<<us[a].medicamentos[i].mes<<"/"<<us[a].medicamentos[i].ano<<endl;
+		cout<<"\tHORA: "<<us[a].medicamentos[i].hora<<":"<<us[a].medicamentos[i].minuto<<":"<<us[a].medicamentos[i].segundo<<endl;
 		cout<<"\t"<<us[a].medicamentos[i].tanti<<": "<<us[a].medicamentos[i].tmedi<<endl;
 		cout<<"\tUNIDADES: "<<us[a].medicamentos[i].unidades<<endl;
 		cout<<"-----------------------------------------------"<<endl;
@@ -994,6 +997,9 @@ void fecha(int a, int e){
     us[a].medicamentos[e].dia=tm_ptr->tm_mday;
     us[a].medicamentos[e].mes=tm_ptr->tm_mon + 1;
     us[a].medicamentos[e].ano=tm_ptr->tm_year + 1900;
+	us[a].medicamentos[e].hora = tm_ptr->tm_hour;
+    us[a].medicamentos[e].minuto = tm_ptr->tm_min;
+    us[a].medicamentos[e].segundo = tm_ptr->tm_sec;
 }
 
 void pedido(int a,int op,int m,int e){
