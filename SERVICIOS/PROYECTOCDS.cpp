@@ -187,16 +187,16 @@ void verificardni(int dni){
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
 			while(true){
-			if(us[i].menperso==0){ //<-- Cuando el usuario no se haya registrado al SDS
-				menu2(i);//<-- si se cumple el if llamaría a la función señalada
-			}
-			if(us[i].menperso==1){//<-- Este if funcionara cuando vuelva del registro al SDS, para abrir un menu perzonalizado
-				menu2(i);				
-			}
-			if(us[i].x==1){
-			break;//<- cuando us[i].x sea igual a 1 el bucle rompera, permitiendo cerrar sesión de forma correcta
-			us[i].x=0;
-			}
+				if(us[i].menperso==0){ //<-- Cuando el usuario no se haya registrado al SDS
+					menu2(i);//<-- si se cumple el if llamaría a la función señalada
+				}
+				if(us[i].menperso==1){//<-- Este if funcionara cuando vuelva del registro al SDS, para abrir un menu perzonalizado
+					menu2(i);				
+				}
+				if(us[i].x==1){
+					break;//<- cuando us[i].x sea igual a 1 el bucle rompera, permitiendo cerrar sesión de forma correcta
+					us[i].x=0;
+				}
 			}
 			return;
 		}
@@ -214,11 +214,13 @@ void menu2(int a){//Segundo Menu principal
 	if(us[a].menperso==0){
 	do{
 		cout<<"--------------------------------------"<<endl;
-		cout<<"1. Registro al Seguro de Salud\n";
-		cout<<"2. Servicios que brinda\n";
-		cout<<"3. Citas\n";
-		cout<<"4. Farmacia\n";
-		cout<<"0. Cerrar Sesion\n";
+		cout<<"		BIENVENIDO\n";
+		cout<<"--------------------------------------"<<endl;
+		cout<<"\t1. Registro al Seguro de Salud\n";
+		cout<<"\t2. Servicios que brinda\n";
+		cout<<"\t3. Citas\n";
+		cout<<"\t4. Farmacia\n";
+		cout<<"\t0. Cerrar Sesion\n";
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
@@ -260,11 +262,13 @@ void menu2(int a){//Segundo Menu principal
 	} else{
 		do{
 		cout<<"--------------------------------------"<<endl;
-		cout<<"1. Seguro de Salud\n";
-		cout<<"2. Servicios que brinda\n";
-		cout<<"3. Citas\n";
-		cout<<"4. Farmacia\n";
-		cout<<"0. Cerrar Sesion\n";
+		cout<<"		BIENVENIDO\n";
+		cout<<"--------------------------------------"<<endl;
+		cout<<"\t1. Seguro de Salud\n";
+		cout<<"\t2. Servicios que brinda\n";
+		cout<<"\t3. Citas\n";
+		cout<<"\t4. Farmacia\n";
+		cout<<"\t0. Cerrar Sesion\n";
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
@@ -311,9 +315,9 @@ void seguro(int a){
 	if(us[a].menperso==0){//Este if tiene como función imprimir el menú indicado para el usuario
 		do{
 			cout<<"--------------------------------------"<<endl;
-			cout<<"1. Continuar con el registro\n";
-			cout<<"2. Informacion sobre el SDS\n";
-			cout<<"3. Volver\n";
+			cout<<"\t1. Continuar con el registro\n";
+			cout<<"\t2. Informacion sobre el SDS\n";
+			cout<<"\t3. Volver\n";
 			cout<<"--------------------------------------"<<endl;
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
@@ -338,9 +342,9 @@ void seguro(int a){
 	}else{
 		do{
 			cout<<"--------------------------------------"<<endl;
-			cout<<"1. Imprimir ficha de registro\n";
-			cout<<"2. Informacion sobre el SDS\n";
-			cout<<"3. Volver\n";
+			cout<<"\t1. Imprimir ficha de registro\n";
+			cout<<"\t2. Informacion sobre el SDS\n";
+			cout<<"\t3. Volver\n";
 			cout<<"--------------------------------------"<<endl;
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
