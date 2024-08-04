@@ -726,6 +726,35 @@ void analgesicos(int a,int op){
 		}
 	}while(m!=0);
 }
+void anestesicos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"--------------ANESTESICOS-------------"<<endl;
+		cout<<"1. Lidocaina"<<endl;
+		cout<<"2. Propofol"<<endl;
+		cout<<"3. Midazolam"<<endl;			
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
 void fecha(){
 	// Obtener el tiempo actual
     time_t t = time(0);
