@@ -50,6 +50,7 @@ void antibioticos(int a,int op);
 void analgesicos(int a,int op);
 void anestesicos(int a,int op);
 void anticoagulantes(int a,int op);
+void antihipertensivos(int a,int op);
 void pedido(int a,int op,int m);
 
 int main(){
@@ -644,7 +645,7 @@ void farmacia(int a){
 					break;
 				case 5:
 					system("cls");
-					//antihipertensivos(a,op);
+					antihipertensivos(a,op);
 					break;
 				case 0:
 					system("cls");
@@ -765,6 +766,35 @@ void anticoagulantes(int a,int op){
 		cout<<"1. Heparina"<<endl;
 		cout<<"2. Warfarina"<<endl;
 		cout<<"3. Enoxaparina"<<endl;			
+		cout<<"0. Salir"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
+			case 1:
+			case 2:
+			case 3:
+				system("cls");
+				pedido(a,op,m);
+				system("pause");
+				break;
+			case 0:
+				system("cls");
+				return;
+				break;
+			default:
+				system("cls");
+				break;
+		}
+	}while(m!=0);
+}
+void antihipertensivos(int a,int op){
+	int m;
+	do{
+		system("cls");
+		cout<<"-----------ANTIHIPERTENSIVOS----------"<<endl;
+		cout<<"1. Lisinopril"<<endl;
+		cout<<"2. Losartan"<<endl;
+		cout<<"3. Metroprolol"<<endl;			
 		cout<<"0. Salir"<<endl;
 		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>m;
