@@ -37,11 +37,12 @@ void verificardni(int dni);
 void menu2(int a);
 void seguro(int a);
 void registrosds(int a);
-void menucitas(int a);
-void citas(int a,int op);
-void fecha();
 void imprimir(int a);
 void servicios();
+void menucitas(int a);
+void fecha();
+void citas(int a,int op);
+void farmacia(int a);
 
 int main(){
     menu();
@@ -436,4 +437,53 @@ void citas(int a,int op){
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
 	cout<<"\tConsultorio: "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
+}
+void farmacia(int a){
+	int op;
+	if(us[a].menperso==1){
+		do{
+			system("cls");
+			cout<<"-------------MEDICAMENTOS-------------"<<endl;
+			cout<<"1. Antiobioticos"<<endl;
+			cout<<"2. Analgecicos y Antiinflamatorias"<<endl;
+			cout<<"3. Anestesicos"<<endl;
+			cout<<"4. Anticoagulantes"<<endl;
+			cout<<"5. Antihipertensivos"<<endl;
+			cout<<"0. Salir"<<endl;
+			cout<<"--------------------------------------"<<endl;
+			cout<<"Seleccione una opcion: ";cin>>op;
+			switch(op){
+				case 1:
+					system("cls");
+					//antibioticos();
+					break;
+				case 2:
+					system("cls");
+					//analgecicos();
+					break;
+				case 3:
+					system("cls");
+					//anestesicos();
+					break;
+				case 4:
+					system("cls");
+					//anticoagulantes();
+					break;
+				case 5:
+					system("cls");
+					//antihipertensivos();
+					break;
+				case 0:
+					system("cls");
+					return;
+					break;
+				default:
+					system("cls");
+					break;
+			}
+		}while(op=!0);
+	}else{
+		cout<<"Necesita estar registrado en el SDS."<<endl;
+		return;
+	}
 }
