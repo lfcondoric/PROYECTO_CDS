@@ -36,6 +36,10 @@ struct MEDI{
 	int dia, mes, ano;
 };
 
+struct nocit{
+	int daes[5];
+};
+
 struct USUARIOS{
 	
 	int dni;
@@ -84,6 +88,7 @@ void antihipertensivos(int a,int op);
 
 
 int main(){
+	nocit mecit[12];
     menu();
     return 0;
 }
