@@ -33,6 +33,7 @@ struct MEDI{
 	int edad;
 	string tanti;
 	string tmedi;
+	int dia, mes, ano;
 };
 
 struct USUARIOS{
@@ -64,7 +65,7 @@ void registrosds(int a);
 void imprimir(int a);
 void servicios();
 void menucitas(int a);
-void fecha();
+void fecha(int a, int e);
 void citas(int a,int op);
 void farmacia(int a);
 void antibioticos(int a,int op);
@@ -640,6 +641,7 @@ void farmacia(int a){
 			cout<<"3. Anestesicos"<<endl;
 			cout<<"4. Anticoagulantes"<<endl;
 			cout<<"5. Antihipertensivos"<<endl;
+			cout<<"6. HISTORIAL DE PEDIDOS"<<endl;
 			cout<<"0. Salir"<<endl;
 			cout<<"--------------------------------------"<<endl;
 			cout<<"Seleccione una opcion: ";cin>>op;
@@ -664,6 +666,10 @@ void farmacia(int a){
 					system("cls");
 					//antihipertensivos();
 					break;
+				case 6:
+					system("cls");
+					//historial();
+					break;
 				case 0:
 					system("cls");
 					return;
@@ -682,6 +688,8 @@ void farmacia(int a){
 		return;
 	}
 }
+
+
 
 void antibioticos(int a,int op){
 	int m;
@@ -715,7 +723,7 @@ void antibioticos(int a,int op){
 	}while(m!=0);
 }
 
-void fecha(){
+void fecha(int a, int e){
 	// Obtener el tiempo actual
     time_t t = time(0);
     
@@ -727,6 +735,9 @@ void fecha(){
 			<< (tm_ptr->tm_mday) << "/"
             << (tm_ptr->tm_mon + 1) << "/"
             << (tm_ptr->tm_year + 1900) << endl;
+    us[a].medicamentos[e].dia=tm_ptr->tm_mday;
+    us[a].medicamentos[e].mes=tm_ptr->tm_mon + 1;
+    us[a].medicamentos[e].ano=tm_ptr->tm_year + 1900;
 }
 
 void pedido(int a,int op,int m,int e){
@@ -741,7 +752,7 @@ void pedido(int a,int op,int m,int e){
 	cout<<"\tEDAD: "<<us[a].edad<<endl;
 		us[a].medicamentos[e].edad=us[a].edad;
 	cout<<"-----------------------------------------------"<<endl;
-	fecha();
+	fecha(a,e);
 	cout<<"\t"<<MD[op-1]<<": "<<AB[m-1]<<endl;
 		us[a].medicamentos[e].tanti=MD[op-1];
 		us[a].medicamentos[e].tmedi=AB[m-1];
