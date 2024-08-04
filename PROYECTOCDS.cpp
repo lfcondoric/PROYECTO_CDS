@@ -44,6 +44,7 @@ void fecha();
 void citas(int a,int op);
 void farmacia(int a);
 void antibioticos();
+void pedido(int op);
 
 int main(){
     menu();
@@ -506,7 +507,8 @@ void antibioticos(){
 			case 3:
 			case 4:
 				system("cls");
-				//pedido();
+				pedido(op);
+				system("pause");
 				break;
 			case 0:
 				system("cls");
@@ -517,4 +519,21 @@ void antibioticos(){
 				break;
 		}
 	}while(op=!0);
+}
+void fecha(){
+	// Obtener el tiempo actual
+    time_t t = time(0);
+    
+    // Convertirlo a una cadena legible
+    tm* tm_ptr = localtime(&t);
+
+    // Imprimir la fecha en formato "dd/mm/aaaa"
+    cout << "\tFecha: "
+			<< (tm_ptr->tm_mday) << "/"
+            << (tm_ptr->tm_mon + 1) << "/"
+            << (tm_ptr->tm_year + 1900) << endl;
+}
+void pedido(int op){
+	string AB[4]={"Amoxicilina","Ceftriaxona","Anestesicos","Ciprofloxacina"};
+	fecha();
 }
