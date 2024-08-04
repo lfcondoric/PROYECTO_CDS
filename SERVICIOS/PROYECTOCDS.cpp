@@ -54,6 +54,7 @@ struct USUARIOS{
 
 }us[100];
 
+void calendario();
 void menu();
 void registro();
 void ingresardt(int x);
@@ -712,50 +713,62 @@ void citas(int a,int op, int e){
 	switch(mes){
 		case 1:{
 			cout<<"-----------enero-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
+			calendario();
 		break;
 		}
 		case 3:{
 			cout<<"-----------marzo-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 4:{
 			cout<<"-----------abril-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 5:{
 			cout<<"------------mayo------------"<<endl;
+			calendario();
 		break;
 		}
 		case 6:{
 			cout<<"-----------junio-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 7:{
 			cout<<"-----------julio-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 8:{
 			cout<<"-----------agosto-----------"<<endl;
+			calendario();
 		break;
 		}
 		case 9:{
 			cout<<"----------septiembre----------"<<endl;
+			calendario();
 		break;
 		}
 		case 10:{
 			cout<<"----------octubre----------"<<endl;
+			calendario();
 		break;
 		}
 		case 11:{
 			cout<<"----------noviembre----------"<<endl;
+			calendario();
 		break;
 		}
 		case 12:{
 			cout<<"----------diciembre----------"<<endl;
+			calendario();
 		break;
 		}
 	}
@@ -1068,4 +1081,9 @@ void pedido(int a,int op,int m,int e){
 		us[a].medicamentos[e].tmedi=AB[m-1];
 	cout<<"-----------------------------------------------"<<endl;
 	us[a].e=e;
+}
+
+
+void calendario(){
+	cout<<" Lun Mar Mie Jue Vie Sab Dom"<<endl;
 }
