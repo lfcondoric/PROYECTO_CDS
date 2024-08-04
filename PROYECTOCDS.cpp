@@ -61,10 +61,13 @@ int main(){
 void menu(){//Primer menú del programa
     int op;
     do{
-    	cout<<"\t\t\tBienvenido al programa CDS\n";
+		cout<<"----------------------------------------------------------------------------"<<endl;
+    	cout<<"\t\t\tBIENVENIDO AL PROGRAMA CDS"<<endl;
+		cout<<"----------------------------------------------------------------------------"<<endl;
         cout<<"1. Registrarse"<<endl; 
         cout<<"2. Iniciar sesion"<<endl;
         cout<<"0. Salir"<<endl;
+		cout<<"----------------------------------------------------------------------------"<<endl;
         cout<<"Seleccione una opcion: ";cin>>op;
         switch(op){
         case 1:
@@ -96,14 +99,17 @@ void menu(){//Primer menú del programa
 void registro(){//menú para la opción 1.Registro
 	int op;
 	do{
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Ingresar Datos personales\n";
 		cout<<"2. Volver\n";
+		cout<<"--------------------------------------"<<endl;
 		cout<<"Selecione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
 				ingresardt(a);//Al mandar una copia de a estoy mandando el indice donde quiero que se guarden los datos de un usuario
 				a++;
+				return;
 				break;
 			case 2:
 				system("cls");
@@ -116,10 +122,12 @@ void registro(){//menú para la opción 1.Registro
 }
 
 void ingresardt(int x){//Registro de datos
+	cout<<"--------------------------------------"<<endl;
 	cout<<"DNI: ";cin>>us[x].dni;
 	cin.ignore();
 	cout<<"Nombres: ";getline(cin, us[x].nombres);
 	cout<<"Apellidos: ";getline(cin, us[x].apellidos);
+	cout<<"--------------------------------------"<<endl;
 	system("pause");
 	system("cls");
 }
@@ -127,13 +135,15 @@ void ingresardt(int x){//Registro de datos
 void iniciosesion(){//menú para la opción 2. Iniciar sesión
 	int op,a;
 	do{
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Ingresar DNI\n";
 		cout<<"2. Volver\n";
+		cout<<"--------------------------------------"<<endl;
 		cout<<"Selecione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
-				cout<<"DNI:";cin>>a;
+				cout<<"DNI: ";cin>>a;
 				verificardni(a);
 				break;
 			case 2:
@@ -177,12 +187,14 @@ void menu2(int a){//Segundo Menu principal
 	//Este if tiene como función imprimir el menú indicado para el usuario
 	if(us[a].menperso==0){
 	do{
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Registro al Seguro de Salud\n";
 		cout<<"2. Servicios que brinda\n";
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
 		cout<<"0. Cerrar Sesion\n";
+		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -226,12 +238,14 @@ void menu2(int a){//Segundo Menu principal
 	}while(op!=0);
 	} else{
 		do{
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Seguro de Salud\n";
 		cout<<"2. Servicios que brinda\n";
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
 		cout<<"0. Cerrar Sesion\n";
+		cout<<"--------------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -280,9 +294,11 @@ void seguro(int a){
 	int op;
 	if(us[a].menperso==0){//Este if tiene como función imprimir el menú indicado para el usuario
 		do{
+			cout<<"--------------------------------------"<<endl;
 			cout<<"1. Continuar con el registro\n";
 			cout<<"2. Informacion sobre el SDS\n";
 			cout<<"3. Volver\n";
+			cout<<"--------------------------------------"<<endl;
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
 				case 1:
@@ -302,12 +318,14 @@ void seguro(int a){
         			system("cls");
           	 	 	break;
 			}
-	}while(op!=2);
+		}while(op!=2);
 	}else{
 		do{
+			cout<<"--------------------------------------"<<endl;
 			cout<<"1. Imprimir ficha de registro\n";
 			cout<<"2. Informacion sobre el SDS\n";
 			cout<<"3. Volver\n";
+			cout<<"--------------------------------------"<<endl;
 			cout<<"Selecione una opcion: ";cin>>op;
 			switch(op){
 				case 1:
@@ -353,17 +371,21 @@ void registrosds(int a){
 	
 	us[a].menperso=1;//Guadar para saber el tipo de menú que se debe imprimir de acuerdo a la interacción del usuario;
 	
-	cout<<"----INGRESE SUS DATOS PERSONALES-----";
-	cout<<"\n1. DE LA AFILIACIÓN\n";
-	cout<<"- Fecha:"<<time->tm_mday<<"/"<<month<<"/"<<year<<endl;
+	cout<<"--------------------------------------"<<endl;
+	cout<<"     INGRESE SUS DATOS PERSONALES     "<<endl;
+	cout<<"--------------------------------------"<<endl;
+	cout<<"1. DATOS DE LA AFILIACION\n";
+	cout<<"\tFecha:"<<time->tm_mday<<"/"<<month<<"/"<<year<<endl;
 	cout<<"\n2. DATOS DEL ASEGURADO\n";
-	cout<<"- Tipo de documento: DNI\n Nro.Documento: "<<us[a].dni<<endl;
+	cout<<"- Tipo de documento: DNI\n -Nro.Documento: "<<us[a].dni<<endl;
 	cout<<"- Nombre: "<<us[a].nombres<<endl;
 	cout<<"- Apellidos: "<<us[a].apellidos<<endl;;
-	cout<<"- Fecha de nacimiento: \nDia:";cin>>us[a].nacimiento.dia;cout<<"Mes: ";cin>>us[a].nacimiento.mes;cout<<"Anio: ";cin>>us[a].nacimiento.anio;
+	cout<<"- Fecha de nacimiento: \n\tDia: ";cin>>us[a].nacimiento.dia;cout<<"\tMes: ";cin>>us[a].nacimiento.mes;cout<<"\tAnio: ";cin>>us[a].nacimiento.anio;
 	cout<<"- Edad: ";cin>>us[a].edad;//Se piensa habilitar algunas lecturas de datos adicionales de acuerdo a la edad del afiliado
 	cout<<"- Sexo: ";cin>>us[a].sexo;
-	cout<<"\n4. DOMICILIO DEL ASEGURADO\n";
+	cout<<"--------------------------------------"<<endl;
+	cout<<"       DOMICILIO DEL ASEGURADO        "<<endl;
+	cout<<"--------------------------------------"<<endl;
 	cin.ignore();
 	cout<<"- Departamento: ";getline(cin, us[a].domicilio.departamento);
 	cout<<"- Provincia: ";getline(cin, us[a].domicilio.provincia);
@@ -376,20 +398,23 @@ void registrosds(int a){
 }
 
 void imprimir(int a){
-	cout<<"---------------------------------------------------------------\n";
-	cout<<"DATOS DEL ASEGURADO\n";
+	cout<<"---------------------------------------------------------------"<<endl;
+	cout<<"                      DATOS DEL ASEGURADO                      "<<endl;
+	cout<<"---------------------------------------------------------------"<<endl;
 	cout<<"\t"<<"DNI: "<<us[a].dni<<endl;
 	cout<<"\t"<<"NOMBRES: "<<us[a].nombres<<endl;
 	cout<<"\t"<<"APELLIDOS: "<<us[a].apellidos<<endl;
-	cout<<"\t"<<"DNI: "<<us[a].nacimiento.dia<<"/"<<us[a].nacimiento.mes<<"/"<<us[a].nacimiento.anio<<endl;
+	cout<<"\t"<<"FECHA DE NACIMIENTO: "<<us[a].nacimiento.dia<<"/"<<us[a].nacimiento.mes<<"/"<<us[a].nacimiento.anio<<endl;
 	cout<<"\t"<<"EDAD: "<<us[a].edad<<endl;
 	cout<<"\t"<<"SEXO: "<<us[a].sexo<<endl;
-	cout<<"DOMICILIO DEL ASEGURADO\n";
+	cout<<"---------------------------------------------------------------"<<endl;
+	cout<<"                    DOMICILIO DEL ASEGURADO                    "<<endl;
+	cout<<"---------------------------------------------------------------"<<endl;
 	cout<<"\t"<<"DEPARTAMENTO: "<<us[a].domicilio.departamento<<endl;
 	cout<<"\t"<<"PROVINCIA: "<<us[a].domicilio.provincia<<endl;
 	cout<<"\t"<<"DISTRITO: "<<us[a].domicilio.distrito<<endl;
 	cout<<"\t"<<"DIRECCION: "<<us[a].domicilio.direcion<<endl;
-	cout<<"---------------------------------------------------------------\n";
+	cout<<"---------------------------------------------------------------"<<endl;
 	system("pause");
 	system("cls");
 	return;
@@ -400,7 +425,9 @@ void servicios(){
 	do{
 		ifstream archivos;
 		string texto;
-		cout<<"--------SERVICIOS---------"<<endl;
+		cout<<"-----------------------------------"<<endl;
+		cout<<"             SERVICIOS             "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"1. Medicina general"<<endl;
 		cout<<"2. Pediatria"<<endl;
 		cout<<"3. Odontologia"<<endl;
@@ -552,7 +579,9 @@ void menucitas(int a){
 	int op;
 	do{
 		system("cls");
-		cout<<"--------SERVICIOS---------"<<endl;
+		cout<<"-----------------------------------"<<endl;
+		cout<<"            SERVICIOS              "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"1. Medicina general"<<endl;
 		cout<<"2. Pediatria"<<endl;
 		cout<<"3. Odontologia"<<endl;
@@ -565,6 +594,7 @@ void menucitas(int a){
 		cout<<"10. Psicologia"<<endl;
 		cout<<"11. Nutricion"<<endl;
 		cout<<"0. Volver "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
@@ -596,7 +626,7 @@ void menucitas(int a){
 void citas(int a,int op){
 	string S[11]={"Medicina general","Pediatria","Odontologia","Obstetricia","Ginecologia","Cardiologia","Oftalmologia","Radiologia","Neumologia","Psicologia","Nutricion"};
 	cout<<"-----------------------------------------------"<<endl;
-	cout<<"------------------CITA MEDICA------------------"<<endl;
+	cout<<"                  CITA MEDICA                  "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DEL PACIENTE"<<endl;
 	cout<<"\tNombres: "<<us[a].nombres<<endl;
@@ -617,7 +647,9 @@ void farmacia(int a){
 	if(us[a].menperso==1){
 		do{
 			system("cls");
-			cout<<"-------------MEDICAMENTOS-------------"<<endl;
+			cout<<"--------------------------------------"<<endl;
+			cout<<"             MEDICAMENTOS             "<<endl;
+			cout<<"--------------------------------------"<<endl;
 			cout<<"1. Antiobioticos"<<endl;
 			cout<<"2. Analgecicos y Antiinflamatorias"<<endl;
 			cout<<"3. Anestesicos"<<endl;
@@ -663,6 +695,7 @@ void farmacia(int a){
 			sleep(1);
 		}
 		cout<<endl;
+		system("cls");
 		return;
 	}
 }
@@ -671,7 +704,9 @@ void antibioticos(int a,int op){
 	int m;
 	do{
 		system("cls");
-		cout<<"-------------ANTIBIOTICOS------------"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"              ANTIBIOTICOS             "<<endl;
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Amoxicilina"<<endl;
 		cout<<"2. Ceftriaxona"<<endl;
 		cout<<"3. Vancomicina"<<endl;			
@@ -702,7 +737,9 @@ void analgesicos(int a,int op){
 	int m;
 	do{
 		system("cls");
-		cout<<"--------------ANALGESICOS-------------"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"              ANALGESICOS             "<<endl;
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Parecetamol"<<endl;
 		cout<<"2. Ibuprofeno"<<endl;
 		cout<<"3. Morfina"<<endl;			
@@ -733,7 +770,9 @@ void anestesicos(int a,int op){
 	int m;
 	do{
 		system("cls");
-		cout<<"--------------ANESTESICOS-------------"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"              ANESTESICOS             "<<endl;
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Lidocaina"<<endl;
 		cout<<"2. Propofol"<<endl;
 		cout<<"3. Midazolam"<<endl;			
@@ -762,7 +801,9 @@ void anticoagulantes(int a,int op){
 	int m;
 	do{
 		system("cls");
-		cout<<"------------ANTICOAGULANTES----------"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"            ANTICOAGULANTES           "<<endl;
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Heparina"<<endl;
 		cout<<"2. Warfarina"<<endl;
 		cout<<"3. Enoxaparina"<<endl;			
@@ -791,7 +832,9 @@ void antihipertensivos(int a,int op){
 	int m;
 	do{
 		system("cls");
-		cout<<"-----------ANTIHIPERTENSIVOS----------"<<endl;
+		cout<<"--------------------------------------"<<endl;
+		cout<<"           ANTIHIPERTENSIVOS          "<<endl;
+		cout<<"--------------------------------------"<<endl;
 		cout<<"1. Lisinopril"<<endl;
 		cout<<"2. Losartan"<<endl;
 		cout<<"3. Metroprolol"<<endl;			
@@ -844,7 +887,7 @@ void pedido(int a,int op,int m){
 		AB[0]="Lisinopril"; AB[1]="Losartán"; AB[2]="Metoprolol";
 	}
 	cout<<"-----------------------------------------------"<<endl;
-	cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
+	cout<<"             PEDIDO DE MEDICAMENTO             "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"\tPACIENTE: "<<us[a].nombres<<" "<<us[a].apellidos<<endl;
 	cout<<"\tEDAD: "<<us[a].edad<<endl;
