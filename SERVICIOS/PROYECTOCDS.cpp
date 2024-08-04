@@ -748,6 +748,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
@@ -777,6 +780,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 3:{
@@ -808,6 +814,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 4:{
@@ -839,6 +848,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 5:{
@@ -870,6 +882,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 6:{
@@ -901,6 +916,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 7:{
@@ -932,6 +950,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 8:{
@@ -963,6 +984,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 9:{
@@ -994,6 +1018,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 10:{
@@ -1025,6 +1052,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 11:{
@@ -1056,6 +1086,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 		case 12:{
@@ -1087,6 +1120,9 @@ void citas(int a,int op, int e){
 			}
 			oct=oct+1;
 			}while(oct!=act);
+			system("cls");
+			cout<<endl;
+			cout<<"-----------elije el horario------------"<<endl;
 		break;
 		}
 	}
