@@ -364,6 +364,8 @@ void imprimir(int a){
 void servicios(){
 	int op;
 	do{
+		ifstream archivos;
+		string texto;
 		cout<<"--------SERVICIOS---------"<<endl;
 		cout<<"1. Medicina general"<<endl;
 		cout<<"2. Pediatria"<<endl;
@@ -380,6 +382,15 @@ void servicios(){
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
+				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\medicinageneral.txt",ios::in);//Abrir el archivo en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				
+				archivos.close();
+				system("pause");
 				system("cls");
 				break;
 			case 2:
