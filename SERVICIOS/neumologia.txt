@@ -1,40 +1,41 @@
-La neumologia es la especialidad medica dedicada al diagnostico y tratamiento de enfermedades y trastornos del sistema respiratorio. 
-Los servicios que brinda la neumologia incluyen:
-
-1. Evaluacion y Diagnostico de Enfermedades Respiratorias:
-   - Examenes Clinicos
-   - Espirometria
-   - Pruebas de Difusion
-   - Oxigenoterapia
-
-2. Tratamiento de Enfermedades Pulmonares Cronicas:
-   - Asma
-   - Enfermedad Pulmonar Obstructiva Cronica (EPOC)
-   - Fibrosis Pulmonar
-
-3. Diagnostico y Manejo de Infecciones Respiratorias:
-   - Neumonia
-   - Bronquitis Cronica y Aguda
-
-4. Tratamiento de Enfermedades del Sueño:
-   - Apnea del Sueño
-
-5. Manejo de Enfermedades Intersticiales del Pulmon:
-   - Enfermedades Intersticiales Pulmonares
-
-6. Procedimientos Diagnosticos y Terapéuticos:
-   - Broncoscopia
-   - Toracocentesis
-
-7. Rehabilitacion Pulmonar:
-   - Programas de Rehabilitacion Pulmonar
-
-8. Asesoramiento y Prevencion:
-   - Educacion sobre Salud Respiratoria
-   - Dejar de Fumar
-
-ESPECIALISTA(S):
-
-	- Dr. JOHAN MANUEL MAMANI TELLEZ
-		Egresado de la USC, con mas de 12 anos de experiencia.
-
+_________________________________________________________________________
+|La neumologia es la especialidad medica dedicada al diagnostico y 	|
+|tratamiento de enfermedades y trastornos del sistema respiratorio. 	|					
+|Los servicios que brinda la neumologia incluyen:			|			
+|									|			
+|1. Evaluacion y Diagnostico de Enfermedades Respiratorias:		|				
+|   - Examenes Clinicos							|					
+|   - Espirometria							|					
+|   - Pruebas de Difusion						|						
+|   - Oxigenoterapia							|					
+|									|			
+|2. Tratamiento de Enfermedades Pulmonares Cronicas:			|															
+|   - Asma								|				
+|   - Enfermedad Pulmonar Obstructiva Cronica (EPOC)			|			
+|   - Fibrosis Pulmonar							|					
+|									|			
+|3. Diagnostico y Manejo de Infecciones Respiratorias:			|			
+|   - Neumonia								|				
+|   - Bronquitis Cronica y Aguda					|							
+|									|			
+|4. Tratamiento de Enfermedades del Sueño:				|		
+|   - Apnea del Sueño							|
+|									|			
+|5. Manejo de Enfermedades Intersticiales del Pulmon:			|	
+|   - Enfermedades Intersticiales Pulmonares				|
+|									|
+|6. Procedimientos Diagnosticos y Terapéuticos:				|
+|   - Broncoscopia							|
+|   - Toracocentesis							|
+|									|								
+|7. Rehabilitacion Pulmonar:						|
+|   - Programas de Rehabilitacion Pulmonar				|
+|									|
+|8. Asesoramiento y Prevencion:						|
+|   - Educacion sobre Salud Respiratoria				|
+|									|
+|ESPECIALISTA(S):							|
+|									|
+|	- Dr. JOHAN MANUEL MAMANI TELLEZ				|
+|		Egresado de la USC, con mas de 12 anos de experiencia.	|
+|_______________________________________________________________________|

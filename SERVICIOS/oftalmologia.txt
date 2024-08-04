@@ -1,48 +1,52 @@
-La oftalmologia es la especialidad medica dedicada al diagnostico, tratamiento y prevencion de enfermedades del ojo y del sistema visual. Los servicios que brinda la oftalmologia incluyen:
-
-1. Examenes y Evaluaciones Oculares:
-   - Examen de la Vista
-   - Refraccion y Prescripcion de Lentes
-   - Examenes de Fondo de Ojo
-
-2. Tratamiento de Enfermedades Oculares:
-   - Cataratas
-   - Glaucoma
-   - Degeneracion Macular
-   - Retinopatia Diabetica
-
-3. Cirugia Ocular:
-   - Cirugia Refractiva
-   - Cirugia de Cataratas
-   - Cirugia de Glaucoma
-
-4. Tratamiento de Problemas de la Superficie Ocular:
-   - Sindrome del Ojo Seco
-   - Infecciones Oculares
-
-5. Manejo de Trastornos del Movimiento Ocular y Estrabismo:
-   - Tratamiento de Estrabismo
-
-6. Rehabilitacion Visual:
-   - Ayudas Visuales
-   - Rehabilitacion de Baja Vision
-
-7. Consulta y Manejo de Condiciones Sistemicas con Manifestaciones Oculares:
-   - Evaluacion de Enfermedades Sistemicas
-
-8. Atencion Pediatrica:
-   - Examenes Oculares Infantiles
-
-9. Cirugia Plastica Ocular:
-   - Cirugia de Parpados y Vias Lagrimales
-
-10. Educacion y Prevencion:
-    - Consejos para la Salud Ocular
-
-ESPECIALISTA(S):
-	
-	- Dr. LUIS MANUEL QUISPE MENDOZA
-		Egresado de la UNSA, con mas de 15 anos de experiencia.
-
-	- Dra. MARIA MENDOZA LLICA	
-		Egresado de la UNSA, con mas de 5 anos de experiencia.
+________________________________________________________________________________
+|La oftalmologia es la especialidad medica dedicada al diagnostico, tratamiento |						
+|y prevencion de enfermedades del ojo y del sistema visual. 			|			
+|Los servicios que brinda la oftalmologia incluyen:				|		
+|										|		
+|1. Examenes y Evaluaciones Oculares:						|						
+|   - Examen de la Vista							|					
+|   - Refraccion y Prescripcion de Lentes					|	
+|   - Examenes de Fondo de Ojo							|					
+|										|		
+|2. Tratamiento de Enfermedades Oculares:					|							
+|   - Cataratas									|									
+|   - Glaucoma									|
+|   - Degeneracion Macular							|					
+|   - Retinopatia Diabetica							|					
+|										|								
+|3. Cirugia Ocular:								|				
+|   - Cirugia Refractiva							|					
+|   - Cirugia de Cataratas							|					
+|   - Cirugia de Glaucoma							|					
+|										|								
+|4. Tratamiento de Problemas de la Superficie Ocular:				|		
+|   - Sindrome del Ojo Seco							|						
+|   - Infecciones Oculares							|					
+|										|		
+|5. Manejo de Trastornos del Movimiento Ocular y Estrabismo:			|			
+|   - Tratamiento de Estrabismo							|					
+|										|								
+|6. Rehabilitacion Visual:							|					
+|   - Ayudas Visuales								|				
+|   - Rehabilitacion de Baja Vision						|
+|										|		
+|7. Consulta y Manejo de Condiciones Sistemicas con Manifestaciones Oculares:	|					
+|   - Evaluacion de Enfermedades Sistemicas					|	
+|										|		
+|8. Atencion Pediatrica:							|					
+|   - Examenes Oculares Infantiles						|
+|										|		
+|9. Cirugia Plastica Ocular:							|					
+|   - Cirugia de Parpados y Vias Lagrimales					|	
+|										|								
+|10. Educacion y Prevencion:							|					
+|   - Consejos para la Salud Ocular						|												
+|										|		
+|ESPECIALISTA(S):								|				
+|										|			
+|	- Dr. LUIS MANUEL QUISPE MENDOZA					|	
+|		Egresado de la UNSA, con mas de 15 anos de experiencia.		|										
+|										|		
+|	- Dra. MARIA MENDOZA LLICA						|							
+|		Egresado de la UNSA, con mas de 5 anos de experiencia.		|
+|_______________________________________________________________________________|

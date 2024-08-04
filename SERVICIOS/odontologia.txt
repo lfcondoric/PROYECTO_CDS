@@ -1,38 +1,40 @@
-La odontologia es la especialidad medica que se encarga de la salud bucodental. 
-Los servicios que brinda la odontologia incluyen:
-
-1. Prevencion: 
-   - Higiene Oral.
-   - Examenes Dentales Regulares
-   - Aplicacion de Fluor y Selladores Dentales
-
-2. Diagnostico:
-   - Examenes Clinicos
-   - Radiografias Dentales
-
-3. Tratamiento de Enfermedades Dentales:
-   - Tratamiento de Caries
-   - Tratamiento de Enfermedades de las Encias
-   - Tratamiento de Infecciones
-
-4. Procedimientos Restauradores:
-   - Empastes
-   - Coronas y Puentes
-   - Implantes Dentales
-
-5. Ortodoncia:
-   - Alineacion de Dientes
-
-6. Odontologia Estetica:
-   - Blanqueamiento Dental
-   - Carillas Dentales
-   - Contorneado Dental
-
-7. Cirugia Oral:
-   - Extracciones Dentales
-   - Cirugia de Impactacion
-
-ESPECIALISTA(S):
-
-	- Dr. ITADORI QUISPE QUISPE
-		Egresado de la UCS, con mas de 4 anos de experiencia.
+________________________________________________________________________
+|La odontologia es la especialidad medica que se encarga de la salud 	|
+|bucodental. Los servicios que brinda la odontologia incluyen:		|
+|									|			
+|1. Prevencion: 							|					
+|   - Higiene Oral.							|					
+|   - Examenes Dentales Regulares					|							
+|   - Aplicacion de Fluor y Selladores Dentales				|		
+|									|			
+|2. Diagnostico:							|					
+|   - Examenes Clinicos							|					
+|   - Radiografias Dentales						|						
+|									|			
+|3. Tratamiento de Enfermedades Dentales:				|		
+|   - Tratamiento de Caries						|						
+|   - Tratamiento de Enfermedades de las Encias				|		
+|   - Tratamiento de Infecciones					|	
+|									|			
+|4. Procedimientos Restauradores:					|	
+|   - Empastes								|				
+|   - Coronas y Puentes							|					
+|   - Implantes Dentales						|
+|									|			
+|5. Ortodoncia:								|				
+|   - Alineacion de Dientes						|
+|									|			
+|6. Odontologia Estetica:						|						
+|   - Blanqueamiento Dental						|
+|   - Carillas Dentales							|											
+|   - Contorneado Dental						|						
+|									|									
+|7. Cirugia Oral:							|					
+|   - Extracciones Dentales						|						
+|   - Cirugia de Impactacion						|
+|									|			
+|ESPECIALISTA(S):							|					
+|									|			
+|	- Dr. ITADORI QUISPE QUISPE					|	
+|		Egresado de la UCS, con mas de 4 anos de experiencia.	|
+|_______________________________________________________________________|

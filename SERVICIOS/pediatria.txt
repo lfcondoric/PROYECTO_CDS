@@ -1,28 +1,31 @@
-La pediatria es una rama de la medicina que se especializa en el cuidado de la salud de los ninos, desde el nacimiento hasta la adolescencia. 
-Los servicios que brinda la pediatria incluyen:
-
-	1. Atencion Integral del Nino
-
-	2. Control de Crecimiento y Desarrollo
-
-	3. Vacunacion
-
-	4. Prevencion de Enfermedades
-	
-	5. Diagnostico y Tratamiento de Enfermedades Agudas y Cronicas
-
-	6. Asesoramiento en Nutricion
-
-	7. Manejo de Problemas de Comportamiento y Desarrollo
-
-	8. Atencion de Urgencias Pediatricas
-
-	9. Apoyo Familiar
-
-ESPECIALISTA(S):
-	
-	- Dr. CHAPU LIN MAMANI MOTTA
-		Egresado de la UTP, con mas 7 anos de experiencia
-
-	- Dr. CARLOS TILIN CABRERA MAMANI
-		Egresado de la UPT, con mas de 3 anos de experiencia
+_________________________________________________________________________
+|La pediatria es una rama de la medicina que se especializa en 		|
+|el cuidado de la salud de los ninos, desde el nacimiento 		|
+|hasta la adolescencia. Los servicios que brinda la pediatria incluyen:	|				
+|									|			
+|	1. Atencion Integral del Nino					|	
+|									|			
+|	2. Control de Crecimiento y Desarrollo				|		
+|									|			
+|	3. Vacunacion							|					
+|									|			
+|	4. Prevencion de Enfermedades					|	
+|									|				
+|	5. Diagnostico y Tratamiento de Enfermedades Agudas y Cronicas	|					
+|									|			
+|	6. Asesoramiento en Nutricion					|	
+|									|			
+|	7. Manejo de Problemas de Comportamiento y Desarrollo		|				
+|									|									
+|	8. Atencion de Urgencias Pediatricas				|		
+|									|			
+|	9. Apoyo Familiar						|
+|									|			
+|ESPECIALISTA(S):							|					
+|									|				
+|	- Dr. CHAPU LIN MAMANI MOTTA					|	
+|		Egresado de la UTP, con mas 7 anos de experiencia	|					
+|									|			
+|	- Dr. CARLOS TILIN CABRERA MAMANI				|		
+|		Egresado de la UPT, con mas de 3 anos de experiencia	|
+|_______________________________________________________________________|
