@@ -472,9 +472,18 @@ void servicios(){
 				break;
 			case 9:
 				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\neumologia.txt",ios::in);//Abrir el archivos en modo lectura
+				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
 				break;
 			case 10:
 				system("cls");
+				
 				break;
 			case 11:
 				system("cls");
