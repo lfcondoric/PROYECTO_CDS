@@ -1,7 +1,8 @@
-La obstetricia es la especialidad mEdica que se enfoca en el cuidado de las mujeres durante el embarazo, el parto y el posparto. Los servicios que brinda la obstetricia incluyen:
+La obstetricia es la especialidad medica que se enfoca en el cuidado de las mujeres durante el embarazo, el parto y el posparto. 
+Los servicios que brinda la obstetricia incluyen:
 
 1. Atencion Prenatal:
-   - Exámenes de Salud Regular
+   - Examenes de Salud Regular
    - Ultrasonidos
    - Pruebas de Laboratorio
    - Asesoramiento Nutricional y de Estilo de Vida
@@ -24,16 +25,13 @@ La obstetricia es la especialidad mEdica que se enfoca en el cuidado de las muje
    - Clases Prenatales
    - Asesoramiento en el Plan de Parto
 
-6. Atencion Ginecologica General:
-   - Exámenes de Salud Reproductiva
-
 7. Asesoramiento en Salud Reproductiva:
    - Planificacion Familiar
 
-ESPECIALISTAS:
+ESPECIALISTA(S):
 	
 	- Dr. CHEPERITO DELOCHO NINA
-		Egresado de la USC, con mas de 5 años de experiencia
+		Egresado de la USC, con mas de 5 anos de experiencia.
 
 
 

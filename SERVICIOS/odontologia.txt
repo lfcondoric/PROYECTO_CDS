@@ -1,17 +1,18 @@
-La odontologia es la especialidad medica que se encarga de la salud bucodental. Los servicios que brinda la odontologia incluyen:
+La odontologia es la especialidad medica que se encarga de la salud bucodental. 
+Los servicios que brinda la odontologia incluyen:
 
 1. Prevencion: 
    - Higiene Oral.
-   - Exámenes Dentales Regulares
+   - Examenes Dentales Regulares
    - Aplicacion de Fluor y Selladores Dentales
 
 2. Diagnostico:
-   - Exámenes ClInicos
-   - RadiografIas Dentales
+   - Examenes Clinicos
+   - Radiografias Dentales
 
 3. Tratamiento de Enfermedades Dentales:
    - Tratamiento de Caries
-   - Tratamiento de Enfermedades de las Encías
+   - Tratamiento de Enfermedades de las Encias
    - Tratamiento de Infecciones
 
 4. Procedimientos Restauradores:
@@ -22,16 +23,16 @@ La odontologia es la especialidad medica que se encarga de la salud bucodental. 
 5. Ortodoncia:
    - Alineacion de Dientes
 
-6. Odontología Estetica:
+6. Odontologia Estetica:
    - Blanqueamiento Dental
    - Carillas Dentales
    - Contorneado Dental
 
 7. Cirugia Oral:
    - Extracciones Dentales
-   - Cirugía de Impactación
+   - Cirugia de Impactacion
 
-ESPECIALISTAS:
+ESPECIALISTA(S):
 
 	- Dr. ITADORI QUISPE QUISPE
-		Egresado de la UCS, con mas de 4 años de experiencia
+		Egresado de la UCS, con mas de 4 anos de experiencia.

@@ -1,4 +1,5 @@
-La nutricion ofrece una variedad de servicios centrados en la promocion de una dieta equilibrada y el manejo de condiciones relacionadas con la alimentacion. Los servicios que brinda la nutricion incluyen:
+La nutricion ofrece una variedad de servicios centrados en la promocion de una dieta equilibrada y el manejo de condiciones relacionadas con la alimentacion. 
+Los servicios que brinda la nutricion incluyen:
 
 1. Evaluacion Nutricional:
    - Valoracion del Estado Nutricional

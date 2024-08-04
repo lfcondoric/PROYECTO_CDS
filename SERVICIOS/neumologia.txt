@@ -1,4 +1,5 @@
-La neumologia es la especialidad medica dedicada al diagnostico y tratamiento de enfermedades y trastornos del sistema respiratorio. Los servicios que brinda la neumologia incluyen:
+La neumologia es la especialidad medica dedicada al diagnostico y tratamiento de enfermedades y trastornos del sistema respiratorio. 
+Los servicios que brinda la neumologia incluyen:
 
 1. Evaluacion y Diagnostico de Enfermedades Respiratorias:
    - Examenes Clinicos

@@ -1,15 +1,16 @@
-La ginecologia es la especialidad medica que se enfoca en la salud del sistema reproductivo femenino. Los servicios que brinda la ginecologia incluyen:
+La ginecologia es la especialidad medica que se enfoca en la salud del sistema reproductivo femenino. 
+Los servicios que brinda la ginecologia incluyen:
 
 1. Examenes Ginecologicos de Rutina:
-   - Exámenes Pélvicos
+   - Examenes Pelvicos
    - Pruebas de Papanicolaou (Pap)
    - Exploraciones Mamarias
 
-2. Manejo de Menstruación y Trastornos Menstruales
+2. Manejo de Menstruacion y Trastornos Menstruales
    - Tratamiento de Trastornos Menstruales
 
 3. Cuidado de la Salud Reproductiva:
-   - Planificación Familiar
+   - Planificacion Familiar
    - Tratamiento de Infertilidad
 
 4. Manejo de Enfermedades Ginecologicas:
@@ -29,7 +30,7 @@ La ginecologia es la especialidad medica que se enfoca en la salud del sistema r
    - Cirugia Minimamente Invasiva
 
 8. Cuidado Durante el Embarazo:
-   - Atención Prenatal y Postnatal
+   - Atencion Prenatal y Postnatal
 
 9. Educacion y Prevencion:
    - Asesoramiento sobre Salud Reproductiva 
@@ -38,5 +39,5 @@ La ginecologia es la especialidad medica que se enfoca en la salud del sistema r
 ESPECIALISTA: 	
 
 	- Dra. Susy María Diaz Perez 
-		Egresada de la ULIMA, con mas de 10 años de experiencia
+		Egresada de la ULIMA, con mas de 10 anos de experiencia
 
