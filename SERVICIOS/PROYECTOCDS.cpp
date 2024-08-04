@@ -618,6 +618,9 @@ void menucitas(int a){
 		cout<<"9. Neumologia"<<endl;
 		cout<<"10. Psicologia"<<endl;
 		cout<<"11. Nutricion"<<endl;
+		cout<<"-----------------------------------"<<endl;
+		cout<<"12.		HISTORIAL DE CITAS		  "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"0. Volver "<<endl;
 		cout<<"-----------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
@@ -635,6 +638,10 @@ void menucitas(int a){
 			case 11:
 				system("cls");
 				citas(a, op, us[a].i+1);
+				system("pause");
+				break;
+			case 12:
+				system("cls");
 				system("pause");
 				break;
 			case 0:
