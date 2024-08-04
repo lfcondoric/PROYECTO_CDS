@@ -54,6 +54,7 @@ struct USUARIOS{
 
 }us[100];
 
+int inimes(int ano, int mes);
 int caldiames(int ano,int mes);
 void mesdias(int ano, int mes);
 void calendario();
@@ -745,7 +746,9 @@ void citas(int a,int op, int e){
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
-			mesdias(ano,mes);do{
+			mesdias(ano,mes);
+			cout<<endl;
+			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -774,7 +777,9 @@ void citas(int a,int op, int e){
 		case 3:{
 			cout<<"-----------marzo-----------"<<endl;
 			calendario();
-			mesdias(ano,mes);do{
+			mesdias(ano,mes);
+			cout<<endl;
+			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -804,6 +809,7 @@ void citas(int a,int op, int e){
 			cout<<"-----------abril-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -834,6 +840,7 @@ void citas(int a,int op, int e){
 			cout<<"------------mayo------------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -864,6 +871,7 @@ void citas(int a,int op, int e){
 			cout<<"-----------junio-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -894,6 +902,7 @@ void citas(int a,int op, int e){
 			cout<<"-----------julio-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -924,6 +933,7 @@ void citas(int a,int op, int e){
 			cout<<"-----------agosto-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -954,6 +964,7 @@ void citas(int a,int op, int e){
 			cout<<"----------septiembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -984,6 +995,7 @@ void citas(int a,int op, int e){
 			cout<<"----------octubre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -1014,6 +1026,7 @@ void citas(int a,int op, int e){
 			cout<<"----------noviembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -1044,6 +1057,7 @@ void citas(int a,int op, int e){
 			cout<<"----------diciembre----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
+			cout<<endl;
 			do{
 			cout<<"elige un dia para tu cita: "<<endl;
 			cin>>dia;
@@ -1420,4 +1434,13 @@ int caldiames(int ano,int mes){
 		}
 	}
 
+}
+
+int inimes(int ano, int mes){
+	int a= (14-mes)/12;
+	int y=  ano -a;
+	int m= mes+12*a-2;
+	int dia= 1,d;
+	d=(dia+y+y/4-y/100+y/400+(3*m)/12)%7;
+	return d;
 }
