@@ -19,12 +19,12 @@ struct DOMI{
 };
 
 struct CITAS{
-	int dia;
-	int mes;
-	int ano;
+	int fdia, dia, fmes, mes, fano, ano, dni;//<-- Los que f.... alamacenará la fecha actual en la que se solicito la cita. Dia,mes, ano es la fecha programada para la cita
 	string medico;
 	string especialidad;
-	string consultorio;
+	int consultorio;
+	string nombres;
+	string apellidos;
 };
 
 struct MEDI{
@@ -50,6 +50,7 @@ struct USUARIOS{
 	int menperso = 0;//Menu perzonalizado
 	int x = 0;
 	int e = 0;//<-- Ayuda a almacenar los medicamentos en orden
+	int i = 0;//<-- Ayuda a almacenar las citas en orden
 
 }us[100];
 
@@ -66,7 +67,8 @@ void imprimir(int a);
 void servicios();
 void menucitas(int a);
 void fecha(int a, int e);
-void citas(int a,int op);
+void citas(int a,int op, int e);
+void historialdeC(int a);
 void farmacia(int a);
 void antibioticos(int a,int op);
 void pedido(int a,int op,int m,int e);
@@ -617,6 +619,9 @@ void menucitas(int a){
 		cout<<"9. Neumologia"<<endl;
 		cout<<"10. Psicologia"<<endl;
 		cout<<"11. Nutricion"<<endl;
+		cout<<"-----------------------------------"<<endl;
+		cout<<"12.		HISTORIAL DE CITAS		  "<<endl;
+		cout<<"-----------------------------------"<<endl;
 		cout<<"0. Volver "<<endl;
 		cout<<"-----------------------------------"<<endl;
 		cout<<"Seleccione una opcion: ";cin>>op;
@@ -633,8 +638,12 @@ void menucitas(int a){
 			case 10:
 			case 11:
 				system("cls");
-				citas(a, op);
+				citas(a, op, us[a].i+1);
 				system("pause");
+				break;
+			case 12:
+				system("cls");
+				historialdeC(a);
 				break;
 			case 0:
 				system("cls");
@@ -647,23 +656,72 @@ void menucitas(int a){
 	}while(op!=0);
 }
 
-void citas(int a,int op){
+void historialdeC(int a){
+	if(us[a].i>0){
+		for(int i=1;i<=us[a].i;i++){
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"FECHA DE SOICITUD: "<<us[a].citas[i].fdia<<"/"<<us[a].citas[i].fmes<<"/"<<us[a].citas[i].fano<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"                  CITA MEDICA                  "<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"INFORMACION DEL PACIENTE"<<endl;
+		cout<<"\tNombres: "<<us[a].citas[i].nombres<<endl;
+		cout<<"\tApellidos: "<<us[a].citas[i].apellidos<<endl;
+		cout<<"\tDNI: "<<us[a].citas[i].dni<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"INFORMACION DE LA CITA"<<endl;
+		cout<<"\tFecha: "<<endl;
+		cout<<"\tHora: "<<endl;
+		cout<<"\tMedico: "<<endl;
+		cout<<"\tEspecialidad: "<<us[a].citas[i].especialidad<<endl;
+		cout<<"\tConsultorio: "<<us[a].citas[i].consultorio<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\n\n";
+	}
+		system("pause");
+		system("cls");
+	}else{
+		cout<<"NO HA HECHO CITAS RECIENTEMENTE\n";
+		system("pause");
+		system("cls");
+	}
+}
+
+void citas(int a,int op, int e){
 	string S[11]={"Medicina general","Pediatria","Odontologia","Obstetricia","Ginecologia","Cardiologia","Oftalmologia","Radiologia","Neumologia","Psicologia","Nutricion"};
+
+	// Obtener el tiempo actual
+    time_t t = time(0);
+    
+    // Convertirlo a una cadena legible
+    tm* tm_ptr = localtime(&t);
+
+    // Guardar la fecha en formato "dd/mm/aaaa"
+	us[a].citas[e].fdia=(tm_ptr->tm_mday);
+ 	us[a].citas[e].fmes=(tm_ptr->tm_mon + 1);
+	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);
+
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"                  CITA MEDICA                  "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DEL PACIENTE"<<endl;
 	cout<<"\tNombres: "<<us[a].nombres<<endl;
+	us[a].citas[e].nombres=us[a].nombres;
 	cout<<"\tApellidos: "<<us[a].apellidos<<endl;
+	us[a].citas[e].apellidos=us[a].apellidos;
 	cout<<"\tDNI: "<<us[a].dni<<endl;
+	us[a].citas[e].dni=us[a].dni;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DE LA CITA"<<endl;
 	cout<<"\tFecha: "<<endl;
 	cout<<"\tHora: "<<endl;
 	cout<<"\tMedico: "<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
+	us[a].citas[e].especialidad=S[op-1];
 	cout<<"\tConsultorio: "<<op<<endl;
+	us[a].citas[e].consultorio=op;
 	cout<<"-----------------------------------------------"<<endl;
+	us[a].i=e;
 }
 
 void farmacia(int a){
