@@ -691,7 +691,8 @@ void farmacia(int a){
 }
 
 void historialdeP(int a){
-	for(int i=0;i<us[a].x;i++){
+	if(us[a].e>0){
+	for(int i=1;i<=us[a].e;i++){
 		cout<<"-----------------------------------------------"<<endl;
 		cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
 		cout<<"-----------------------------------------------"<<endl;
@@ -704,6 +705,12 @@ void historialdeP(int a){
 	}
 	system("pause");
 	system("cls");
+	return;
+	}else{
+		cout<<"NO HA HECHO PEDIDOS RECIENTEMENTE\n";
+	system("pause");
+	system("cls");
+	}
 }
 
 void antibioticos(int a,int op){
@@ -724,7 +731,7 @@ void antibioticos(int a,int op){
 			case 3:
 			case 4:
 				system("cls");
-				pedido(a,op,m, us[a].x);
+				pedido(a,op,m, us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -772,6 +779,5 @@ void pedido(int a,int op,int m,int e){
 		us[a].medicamentos[e].tanti=MD[op-1];
 		us[a].medicamentos[e].tmedi=AB[m-1];
 	cout<<"-----------------------------------------------"<<endl;
-	e++;
-	us[a].x=e;
+	us[a].e=e;
 }
