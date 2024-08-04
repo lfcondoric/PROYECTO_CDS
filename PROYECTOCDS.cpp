@@ -490,6 +490,7 @@ void farmacia(int a){
 			cout<<".";
 			sleep(1);
 		}
+		cout<<endl;
 		return;
 	}
 }
@@ -539,7 +540,18 @@ void fecha(){
 }
 void pedido(int a,int op,int m){
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
-	string AB[4]={"Amoxicilina","Ceftriaxona","Vancomicina","Ciprofloxacina"};
+	string AB[4];
+	if(op==1){
+		AB[0]="Amoxicilina"; AB[1]="Ceftriaxona"; AB[2]="Vancomicina"; AB[3]="Ciprofloxacina";
+	} else if(op==2){
+		AB[0]="Paracetamol"; AB[1]="Ibuprofeno"; AB[2]="Morfina"; AB[3]="Tramadol";
+	} else if(op==3){
+		AB[0]="Lidocaina"; AB[1]="Propofol"; AB[2]="Midazolam";
+	} else if(op==4){
+		AB[0]="Heparina"; AB[1]="Warfarina"; AB[2]="Enoxaparina";
+	} else if(op==5){
+		AB[0]="Lisinopril"; AB[1]="Losartán"; AB[2]="Metoprolol";
+	}
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
 	cout<<"-----------------------------------------------"<<endl;
