@@ -417,6 +417,14 @@ void servicios(){
 				break;
 			case 4:
 				system("cls");
+				archivos.open("d:\\fp\\proyecto_cds\\servicios\\obstetricia.txt",ios::in);//Abrir el archivos en modo lectura
+  				while(!archivos.eof()){//Mientras no sea el final del archivo
+					getline(archivos,texto);
+					cout<<texto<<endl;
+				}
+				archivos.close();
+				system("pause");
+				system("cls");
 				break;
 			case 5:
 				system("cls");
