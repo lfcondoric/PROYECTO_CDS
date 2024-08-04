@@ -143,7 +143,9 @@ void verificardni(int dni){
 		if(dni==us[i].dni){//Compara el dni ingresado con los demás registrados anteriormente
 			system("cls");
 			menu2(i);//<-- si se cumple el if llamaría a la función señalada
-			menu2(i);
+			if(us[i].menperso==1){//<-- Este if funcionara cuando vuelva del registro al SDS, para abrir un menu perzonalizado
+			menu2(i);				
+			}
 			return;
 		}
 	}
@@ -164,13 +166,13 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
-		cout<<"0. Cerrar Sesión\n";
+		cout<<"0. Cerrar Sesion\n";
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
 				system("cls");
 				seguro(a);
-				return;
+				return; //<-- retornara hacia la funcion verificar dni
 				break;
 			case 2:
 				system("cls");
@@ -212,7 +214,7 @@ void menu2(int a){//Segundo Menu principal
 		cout<<"3. Citas\n";
 		cout<<"4. Farmacia\n";
 		cout<<"5. Notificaciones\n";
-		cout<<"0. Cerrar Sesión\n";
+		cout<<"0. Cerrar Sesion\n";
 		cout<<"Seleccione una opcion: ";cin>>op;
 		switch(op){
 			case 1:
