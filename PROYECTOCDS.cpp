@@ -18,7 +18,26 @@ struct DOMI{
 	string direcion;
 };
 
+struct CITAS{
+	int dia;
+	int mes;
+	int ano;
+	string medico;
+	string especialidad;
+	string consultorio;
+};
+
+struct MEDI{
+	string nombres;
+	string apellido;
+	int edad;
+	string tanti;
+	string tmedi;
+	int dia, mes, ano;
+};
+
 struct USUARIOS{
+	
 	int dni;
 	string nombres;
 	string apellidos;
@@ -26,8 +45,11 @@ struct USUARIOS{
 	char sexo[20];
 	FECHA nacimiento;
 	DOMI domicilio;
+	CITAS citas[100];
+	MEDI medicamentos[100];
 	int menperso = 0;//Menu perzonalizado
 	int x = 0;
+	int e = 0;//<-- Ayuda a almacenar los medicamentos en orden
 
 }us[100];
 
@@ -43,15 +65,17 @@ void registrosds(int a);
 void imprimir(int a);
 void servicios();
 void menucitas(int a);
-void fecha();
+void fecha(int a, int e);
 void citas(int a,int op);
 void farmacia(int a);
 void antibioticos(int a,int op);
+void pedido(int a,int op,int m,int e);
+void historialdeP(int a);
 void analgesicos(int a,int op);
 void anestesicos(int a,int op);
 void anticoagulantes(int a,int op);
 void antihipertensivos(int a,int op);
-void pedido(int a,int op,int m);
+
 
 int main(){
     menu();
@@ -655,6 +679,7 @@ void farmacia(int a){
 			cout<<"3. Anestesicos"<<endl;
 			cout<<"4. Anticoagulantes"<<endl;
 			cout<<"5. Antihipertensivos"<<endl;
+			cout<<"6. HISTORIAL DE PEDIDOS"<<endl;
 			cout<<"0. Salir"<<endl;
 			cout<<"--------------------------------------"<<endl;
 			cout<<"Seleccione una opcion: ";cin>>op;
@@ -679,6 +704,10 @@ void farmacia(int a){
 					system("cls");
 					antihipertensivos(a,op);
 					break;
+				case 6:
+					system("cls");
+					historialdeP(a);
+					break;
 				case 0:
 					system("cls");
 					return;
@@ -697,6 +726,29 @@ void farmacia(int a){
 		cout<<endl;
 		system("cls");
 		return;
+	}
+}
+
+void historialdeP(int a){
+	if(us[a].e>0){
+	for(int i=1;i<=us[a].e;i++){
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\tPACIENTE: "<<us[a].medicamentos[i].nombres<<" "<<us[a].medicamentos[i].apellido<<endl;
+		cout<<"\tEDAD: "<<us[a].medicamentos[i].edad<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+		cout<<"\tFECHA: "<<us[a].medicamentos[i].dia<<"/"<<us[a].medicamentos[i].mes<<"/"<<us[a].medicamentos[i].ano<<endl;
+		cout<<"\t"<<us[a].medicamentos[i].tanti<<": "<<us[a].medicamentos[i].tmedi<<endl;
+		cout<<"-----------------------------------------------"<<endl;
+	}
+	system("pause");
+	system("cls");
+	return;
+	}else{
+		cout<<"NO HA HECHO PEDIDOS RECIENTEMENTE\n";
+	system("pause");
+	system("cls");
 	}
 }
 
@@ -720,7 +772,7 @@ void antibioticos(int a,int op){
 			case 3:
 			case 4:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m, us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -733,6 +785,7 @@ void antibioticos(int a,int op){
 		}
 	}while(m!=0);
 }
+
 void analgesicos(int a,int op){
 	int m;
 	do{
@@ -753,7 +806,7 @@ void analgesicos(int a,int op){
 			case 3:
 			case 4:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m, us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -766,6 +819,7 @@ void analgesicos(int a,int op){
 		}
 	}while(m!=0);
 }
+
 void anestesicos(int a,int op){
 	int m;
 	do{
@@ -784,7 +838,7 @@ void anestesicos(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -797,6 +851,7 @@ void anestesicos(int a,int op){
 		}
 	}while(m!=0);
 }
+
 void anticoagulantes(int a,int op){
 	int m;
 	do{
@@ -815,7 +870,7 @@ void anticoagulantes(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -828,6 +883,7 @@ void anticoagulantes(int a,int op){
 		}
 	}while(m!=0);
 }
+
 void antihipertensivos(int a,int op){
 	int m;
 	do{
@@ -846,7 +902,7 @@ void antihipertensivos(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -859,7 +915,8 @@ void antihipertensivos(int a,int op){
 		}
 	}while(m!=0);
 }
-void fecha(){
+
+void fecha(int a, int e){
 	// Obtener el tiempo actual
     time_t t = time(0);
     
@@ -871,8 +928,12 @@ void fecha(){
 			<< (tm_ptr->tm_mday) << "/"
             << (tm_ptr->tm_mon + 1) << "/"
             << (tm_ptr->tm_year + 1900) << endl;
+    us[a].medicamentos[e].dia=tm_ptr->tm_mday;
+    us[a].medicamentos[e].mes=tm_ptr->tm_mon + 1;
+    us[a].medicamentos[e].ano=tm_ptr->tm_year + 1900;
 }
-void pedido(int a,int op,int m){
+
+void pedido(int a,int op,int m,int e){
 	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
 	string AB[4];
 	if(op==1){
@@ -890,9 +951,15 @@ void pedido(int a,int op,int m){
 	cout<<"             PEDIDO DE MEDICAMENTO             "<<endl;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"\tPACIENTE: "<<us[a].nombres<<" "<<us[a].apellidos<<endl;
+		us[a].medicamentos[e].nombres=us[a].nombres;
+		us[a].medicamentos[e].apellido=us[a].apellidos;
 	cout<<"\tEDAD: "<<us[a].edad<<endl;
+		us[a].medicamentos[e].edad=us[a].edad;
 	cout<<"-----------------------------------------------"<<endl;
-	fecha();
+	fecha(a,e);
 	cout<<"\t"<<MD[op-1]<<": "<<AB[m-1]<<endl;
+		us[a].medicamentos[e].tanti=MD[op-1];
+		us[a].medicamentos[e].tmedi=AB[m-1];
 	cout<<"-----------------------------------------------"<<endl;
+	us[a].e=e;
 }
