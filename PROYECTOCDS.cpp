@@ -26,8 +26,9 @@ struct USUARIOS{
 	char sexo[20];
 	FECHA nacimiento;
 	DOMI domicilio;
-	int menperso = 0;//Menú perzonalizado
+	int menperso = 0;//Menu perzonalizado
 	int x = 0;
+
 }us[100];
 
 void menu();
@@ -45,8 +46,8 @@ void menucitas(int a);
 void fecha();
 void citas(int a,int op);
 void farmacia(int a);
-void antibioticos();
-void pedido(int op);
+void antibioticos(int a,int op);
+void pedido(int a,int op,int m);
 
 int main(){
     menu();
@@ -624,7 +625,7 @@ void farmacia(int a){
 			switch(op){
 				case 1:
 					system("cls");
-					antibioticos();
+					antibioticos(a,op);
 					break;
 				case 2:
 					system("cls");
@@ -650,32 +651,36 @@ void farmacia(int a){
 					system("cls");
 					break;
 			}
-		}while(op=!0);
+		}while(op!=0);
 	}else{
-		cout<<"Necesita estar registrado en el SDS."<<endl;
+		cout<<"Necesita estar registrado en el SDS";
+		for(int i=1;i<=3;i++){
+			cout<<".";
+			sleep(1);
+		}
 		return;
 	}
 }
 
-void antibioticos(){
-	int op;
+void antibioticos(int a,int op){
+	int m;
 	do{
 		system("cls");
 		cout<<"-------------ANTIBIOTICOS------------"<<endl;
 		cout<<"1. Amoxicilina"<<endl;
 		cout<<"2. Ceftriaxona"<<endl;
-		cout<<"3. Anestesicos"<<endl;			
+		cout<<"3. Vancomicina"<<endl;			
 		cout<<"4. Ciprofloxacina"<<endl;
 		cout<<"0. Salir"<<endl;
 		cout<<"--------------------------------------"<<endl;
-		cout<<"Seleccione una opcion: ";cin>>op;
-		switch(op){
+		cout<<"Seleccione una opcion: ";cin>>m;
+		switch(m){
 			case 1:
 			case 2:
 			case 3:
 			case 4:
 				system("cls");
-				pedido(op);
+				pedido(a,op,m);
 				system("pause");
 				break;
 			case 0:
@@ -686,7 +691,7 @@ void antibioticos(){
 				system("cls");
 				break;
 		}
-	}while(op=!0);
+	}while(m!=0);
 }
 void fecha(){
 	// Obtener el tiempo actual
@@ -696,12 +701,21 @@ void fecha(){
     tm* tm_ptr = localtime(&t);
 
     // Imprimir la fecha en formato "dd/mm/aaaa"
-    cout << "\tFecha: "
+    cout << "\tFECHA: "
 			<< (tm_ptr->tm_mday) << "/"
             << (tm_ptr->tm_mon + 1) << "/"
             << (tm_ptr->tm_year + 1900) << endl;
 }
-void pedido(int op){
-	string AB[4]={"Amoxicilina","Ceftriaxona","Anestesicos","Ciprofloxacina"};
+void pedido(int a,int op,int m){
+	string MD[5]={"ANTIBIOTICO","ANALGECICO","ANESTESICOS","ANTICOAGULANTES","ANTIHIPERTENSIVOS"};
+	string AB[4]={"Amoxicilina","Ceftriaxona","Vancomicina","Ciprofloxacina"};
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"-------------PEDIDO DE MEDICAMENTO-------------"<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"\tPACIENTE: "<<us[a].nombres<<" "<<us[a].apellidos<<endl;
+	cout<<"\tEDAD: "<<us[a].edad<<endl;
+	cout<<"-----------------------------------------------"<<endl;
 	fecha();
+	cout<<"\t"<<MD[op-1]<<": "<<AB[m-1]<<endl;
+	cout<<"-----------------------------------------------"<<endl;
 }
