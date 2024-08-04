@@ -769,7 +769,7 @@ void analgesicos(int a,int op){
 			case 3:
 			case 4:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m, us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -799,7 +799,7 @@ void anestesicos(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -829,7 +829,7 @@ void anticoagulantes(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
@@ -859,7 +859,7 @@ void antihipertensivos(int a,int op){
 			case 2:
 			case 3:
 				system("cls");
-				pedido(a,op,m);
+				pedido(a,op,m,us[a].e+1);
 				system("pause");
 				break;
 			case 0:
