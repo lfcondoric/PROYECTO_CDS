@@ -85,6 +85,7 @@ void analgesicos(int a,int op);
 void anestesicos(int a,int op);
 void anticoagulantes(int a,int op);
 void antihipertensivos(int a,int op);
+void pantalla(int tur,string doc,int mes,int dia);
 
 
 int main(){
@@ -1544,4 +1545,42 @@ int inimes(int ano, int mes){
 	int dia= 1,d;
 	d=(dia+y+y/4-y/100+y/400+(3*m)/12)%7;
 	return d;
+}
+
+void pantalla(int tur,string doc,int mes,int dia){
+	float horari;
+	if(tur==1){
+		horari=6;
+	}
+	else{
+		horari=14;
+	}
+	if(tur==1){
+		cout<<"------------------------------------------"<<endl;
+		cout<<"------------------MAÑANA------------------"<<endl;
+		cout<<"HORA             DOCTOR     DISPONIBILIDAD"<<endl;
+		cout<<"------------------------------------------"<<endl;
+		string producto=" ";
+		for(int i=1; i<=6;i++){
+			if(i<10){
+				cout<<horari<<espaciar(2,12)<< doc<<espaciar(producto.size(),16)<<mec[mes].mesit[dia].manana[i]<<endl;
+			horari=horari+1;
+			}
+			else{
+				cout<<horari<<espaciar(1,12)<< doc<<espaciar(producto.size(),16)<<mec[mes].mesit[dia].manana[i]<<endl;
+			horari=horari+1;
+			}
+		}
+	}
+	else{
+		cout<<"------------------------------------------"<<endl;
+		cout<<"------------------TARDE------------------"<<endl;
+		cout<<"HORA             DOCTOR     DISPONIBILIDAD"<<endl;
+		cout<<"------------------------------------------"<<endl;
+		string producto=" ";
+		for(int i=1; i<=6;i++){
+			cout<<horari<<espaciar(4,18)<< doc<<espaciar(producto.size(),19)<<mec[mes].mesit[dia].tardd[i]<<endl;
+			horari=horari+1;
+		}
+	}	
 }
