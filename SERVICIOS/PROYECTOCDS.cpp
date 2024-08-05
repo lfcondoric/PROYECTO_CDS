@@ -318,8 +318,8 @@ void menu2(int a){//Segundo Menu principal
 				servicios();
 				break;
 			case 3:
-				system("cls");
-				menucitas(a);
+					system("cls");
+					menucitas(a);
 				break;
 			case 4:
 				system("cls");
@@ -635,57 +635,67 @@ void servicios(){
 
 void menucitas(int a){
 	int op;
-	do{
-		system("cls");
-		cout<<"-----------------------------------"<<endl;
-		cout<<"            SERVICIOS              "<<endl;
-		cout<<"-----------------------------------"<<endl;
-		cout<<"1. Medicina general"<<endl;
-		cout<<"2. Pediatria"<<endl;
-		cout<<"3. Odontologia"<<endl;
-		cout<<"4. Obstetricia"<<endl;
-		cout<<"5. Ginecologia"<<endl;
-		cout<<"6. Cardiologia"<<endl;
-		cout<<"7. Oftalmologia"<<endl;
-		cout<<"8. Radiologia"<<endl;
-		cout<<"9. Neumologia"<<endl;
-		cout<<"10. Psicologia"<<endl;
-		cout<<"11. Nutricion"<<endl;
-		cout<<"-----------------------------------"<<endl;
-		cout<<"12.		HISTORIAL DE CITAS		  "<<endl;
-		cout<<"-----------------------------------"<<endl;
-		cout<<"0. Volver "<<endl;
-		cout<<"-----------------------------------"<<endl;
-		cout<<"Seleccione una opcion: ";cin>>op;
-		switch(op){
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-			case 7:
-			case 8:
-			case 9:
-			case 10:
-			case 11:
-				system("cls");
-				citas(a, op, us[a].i+1);
-				system("pause");
-				break;
-			case 12:
-				system("cls");
-				historialdeC(a);
-				break;
-			case 0:
-				system("cls");
-				return;
-				break;
-			default:
-				system("cls");
-				break;
+	if(us[a].menperso==1){
+		do{
+			system("cls");
+			cout<<"-----------------------------------"<<endl;
+			cout<<"                CITA               "<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"1. Medicina general"<<endl;
+			cout<<"2. Pediatria"<<endl;
+			cout<<"3. Odontologia"<<endl;
+			cout<<"4. Obstetricia"<<endl;
+			cout<<"5. Ginecologia"<<endl;
+			cout<<"6. Cardiologia"<<endl;
+			cout<<"7. Oftalmologia"<<endl;
+			cout<<"8. Radiologia"<<endl;
+			cout<<"9. Neumologia"<<endl;
+			cout<<"10. Psicologia"<<endl;
+			cout<<"11. Nutricion"<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"12.		HISTORIAL DE CITAS		  "<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"0. Volver "<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"Seleccione una opcion: ";cin>>op;
+			switch(op){
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+				case 11:
+					system("cls");
+					citas(a, op, us[a].i+1);
+					system("pause");
+					break;
+				case 12:
+					system("cls");
+					historialdeC(a);
+					break;
+				case 0:
+					system("cls");
+					return;
+					break;
+				default:
+					system("cls");
+					break;
+			}
+		}while(op!=0);
+	}else{
+		cout<<"Necesita estar registrado en el SDS";
+		for(int i=1;i<=3;i++){
+			cout<<".";
+			sleep(1);
 		}
-	}while(op!=0);
+		cout<<endl;
+		system("cls");
+	}
 }
 
 void historialdeC(int a){
@@ -771,6 +781,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -820,6 +831,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -869,6 +881,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -918,6 +931,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -967,6 +981,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -1016,6 +1031,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -1065,6 +1081,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -1114,6 +1131,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -1163,6 +1181,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
@@ -1212,7 +1231,8 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1261,7 +1281,8 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1310,6 +1331,7 @@ void citas(int a,int op, int e){
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
+			cout<<"----------------------------"<<endl;
 			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
