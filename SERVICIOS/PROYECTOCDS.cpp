@@ -731,7 +731,7 @@ void citas(int a,int op, int e){
 	us[a].citas[e].apellidos=us[a].apellidos;
 	cout<<"\tDNI: "<<us[a].dni<<endl;
 	us[a].citas[e].dni=us[a].dni;
-	
+
 	if(tope<2){
 		for(int a=1;a<=12;a++){
 			for(int b=1;b<=31;b++){
@@ -781,6 +781,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
@@ -818,6 +820,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 3:{
@@ -857,6 +861,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 4:{
@@ -896,6 +902,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 5:{
@@ -935,6 +943,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 6:{
@@ -974,6 +984,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 7:{
@@ -1013,6 +1025,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 8:{
@@ -1052,6 +1066,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 9:{
@@ -1091,6 +1107,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 10:{
@@ -1130,6 +1148,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 11:{
@@ -1169,6 +1189,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 		case 12:{
@@ -1208,6 +1230,8 @@ void citas(int a,int op, int e){
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,doc, mes,dia);
+			cout<<"ELIGE UNA HORA: "<<endl;
+			cin>>horita;
 		break;
 		}
 	}
