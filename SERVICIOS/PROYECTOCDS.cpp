@@ -1323,17 +1323,18 @@ void citas(int a,int op, int e){
 	cita[tope].di=dia;
 	cita[tope].me=namemes(mes);
 	cita[tope].an=ano;
-	cout<<"-----------------------------------------------"<<endl;
-	cout<<"INFORMACION DE LA CITA"<<endl;
-	cout<<"\tFecha: "<<endl;   
-	cout<<"\tHora: "<<endl;
-	cout<<"\tMedico: "<<endl;
+	cout<<"--------------------------------------------"<<endl;
+	cout<<"------------------CITA-----------------"<<endl;
+	cout<<"DIA:               "<<cita[tope].di<<endl;
+	cout<<"MES:               "<<cita[tope].me<<endl;
+	cout<<"ANO:               "<<cita[tope].an<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
 	us[a].citas[e].especialidad=S[op-1];
 	cout<<"\tConsultorio: "<<op<<endl;
 	us[a].citas[e].consultorio=op;
-	cout<<"-----------------------------------------------"<<endl;
+	cout<<"--------------------------------------------"<<endl;
 	us[a].i=e;
+	tope++;
 }
 
 void farmacia(int a){
