@@ -765,12 +765,13 @@ void citas(int a,int op, int e){
 	}
 	switch(mes){
 		case 1:{
-			cout<<"-----------ENERO-----------"<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"            ENERO           "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -786,7 +787,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -795,10 +796,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -812,12 +814,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 2:{
-			cout<<"----------FEBRERO----------"<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"           FEBRERO          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -833,7 +836,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -842,10 +845,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -859,12 +863,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 3:{
-			cout<<"-----------MARZO-----------"<<endl;
+			cout<<"---------------------------"<<endl;
+			cout<<"            MARZO          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -880,7 +885,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -889,10 +894,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -906,12 +912,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 4:{
-			cout<<"-----------ABRIL-----------"<<endl;
+			cout<<"---------------------------"<<endl;
+			cout<<"           ABRIL           "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -927,7 +934,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -936,10 +943,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -953,12 +961,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 5:{
-			cout<<"------------MAYO------------"<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"            MAYO            "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -974,7 +983,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -983,10 +992,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1000,12 +1010,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 6:{
-			cout<<"-----------JUNIO-----------"<<endl;
+			cout<<"---------------------------"<<endl;
+			cout<<"            JUNIO           "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1021,7 +1032,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1030,10 +1041,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1047,12 +1059,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 7:{
-			cout<<"-----------JULIO-----------"<<endl;
+			cout<<"---------------------------"<<endl;
+			cout<<"           JULIO           "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1068,7 +1081,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1077,10 +1090,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1094,12 +1108,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 8:{
-			cout<<"-----------AGOSTO-----------"<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"           AGOSTO           "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1115,7 +1130,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1124,10 +1139,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1141,12 +1157,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 9:{
-			cout<<"----------SEPTIEMBRE----------"<<endl;
+			cout<<"------------------------------"<<endl;
+			cout<<"          SEPTIEMBRE          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1162,7 +1179,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1171,10 +1188,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1188,7 +1206,8 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 10:{
-			cout<<"----------OCTUBRE----------"<<endl;
+			cout<<"----------------------------"<<endl;
+			cout<<"           OCTUBRE          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1209,7 +1228,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION "<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1218,10 +1237,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1235,7 +1255,8 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 11:{
-			cout<<"----------NOVIEMBRE----------"<<endl;
+			cout<<"-----------------------------"<<endl;
+			cout<<"          NOVIEMBRE          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1256,7 +1277,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION"<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1265,10 +1286,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1282,12 +1304,13 @@ void citas(int a,int op, int e){
 		break;
 		}
 		case 12:{
-			cout<<"----------DICIEMBRE----------"<<endl;
+			cout<<"-----------------------------"<<endl;
+			cout<<"          DICIEMBRE          "<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
 			do{
-			cout<<"elige un dia para tu cita: "<<endl;
+			cout<<"Elige un dia para tu cita: "<<endl;
 			cin>>dia;
 			int z = inimes(ano,mes);
 			int i=1;
@@ -1303,7 +1326,7 @@ void citas(int a,int op, int e){
 			cout<<endl;
 			for(int e=1;e<=5;e++){
 				if(dia==mecit[mes].daes[e]){
-					cout<<"ESTE DIA NO HAY ATENCIO "<<endl;
+					cout<<"ESTE DIA NO HAY ATENCION"<<endl;
 					cout<<"INTRODUSCA OTRO NUMERO DE DIA: "<<endl;
 					act=act+1;
 				}
@@ -1312,10 +1335,11 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"-----------Elige el horario------------"<<endl;
 			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
-			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
+			cout<<"---------------------------------------"<<endl;
+			cout<<"EL HORARIO QUE ELIGES ES: "<<endl;
 			cin>>tur;
 			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
@@ -1337,7 +1361,8 @@ void citas(int a,int op, int e){
 	system("cls");
 	cout<<endl;
 	cout<<"--------------------------------------------"<<endl;
-	cout<<"---------------CITA---------------"<<endl;
+	cout<<"                    CITA                    "<<endl;
+	cout<<"--------------------------------------------"<<endl;
 	cout<<"DIA:            "<<us[a].ala[tope].di<<endl;
 	cout<<"MES:            "<<us[a].ala[tope].me<<endl;
 	cout<<"ANO:            "<<us[a].ala[tope].an<<endl;
@@ -1723,7 +1748,8 @@ void pantalla(int tur,string doc,int mes,int dia){
 	}
 	if(tur==1){
 		cout<<"------------------------------------------"<<endl;
-		cout<<"------------------MANANA------------------"<<endl;
+		cout<<"                  MANANA                  "<<endl;
+		cout<<"------------------------------------------"<<endl;
 		cout<<"HORA             DOCTOR     DISPONIBILIDAD"<<endl;
 		cout<<"------------------------------------------"<<endl;
 		string producto=" ";
@@ -1740,7 +1766,8 @@ void pantalla(int tur,string doc,int mes,int dia){
 	}
 	else{
 		cout<<"------------------------------------------"<<endl;
-		cout<<"------------------TARDE------------------"<<endl;
+		cout<<"                   TARDE                  "<<endl;
+		cout<<"------------------------------------------"<<endl;
 		cout<<"HORA             DOCTOR     DISPONIBILIDAD"<<endl;
 		cout<<"------------------------------------------"<<endl;
 		string producto=" ";
