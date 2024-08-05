@@ -714,8 +714,9 @@ void citas(int a,int op, int e){
     // Guardar la fecha en formato "dd/mm/aaaa"
 	us[a].citas[e].fdia=(tm_ptr->tm_mday);
  	us[a].citas[e].fmes=(tm_ptr->tm_mon + 1);
-	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);   
+	us[a].citas[e].fano=(tm_ptr->tm_year + 1900);  
 
+	int d=1;
 	int ano,mes,dia,tur,horita,xu,act,oct;
 	ano=(tm_ptr->tm_year + 1900);
 	mes=(tm_ptr->tm_mon + 1);
@@ -730,6 +731,18 @@ void citas(int a,int op, int e){
 	us[a].citas[e].apellidos=us[a].apellidos;
 	cout<<"\tDNI: "<<us[a].dni<<endl;
 	us[a].citas[e].dni=us[a].dni;
+	
+	if(tope<2){
+		for(int a=1;a<=12;a++){
+			for(int b=1;b<=31;b++){
+				for(int c=1;c<=6;c++){
+					mec[a].mesit[b].tardd[d]='s';
+					mec[a].mesit[b].manana[c]='s';
+					d++;
+				}
+			}
+		}
+	}
 	switch(mes){
 		case 1:{
 			cout<<"-----------enero-----------"<<endl;
