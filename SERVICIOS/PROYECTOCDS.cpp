@@ -49,6 +49,13 @@ struct tarmas{
 	char tardd[6];
 };
 
+struct citas{
+	int h;       
+	int di;
+	string me;
+	int an;
+};
+
 struct USUARIOS{
 	
 	int dni;
@@ -1309,6 +1316,7 @@ void citas(int a,int op, int e){
 		break;
 		}
 	}
+
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DE LA CITA"<<endl;
 	cout<<"\tFecha: "<<endl;   
