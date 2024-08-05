@@ -53,7 +53,7 @@ struct mestarma{
 	tarmas mesit[31];
 };
 
-string medico[11]={"Dr. LUJAN","Dr. MAMANI","Dr. QUISPE","Dr. DELOCHO","Dra. Diaz ","Dra. CENTENO","Dr. QUISPE M.","Dr. CONDORI","Dr. MAMANI T.","Dra. GUTIERREZ","Dra. ONOFRE "};
+string medico[11]={"Dr.LUJAN","Dr.MAMANi","Dr.QUISPE","Dr.DELOCHO","Dra.Diaz ","Dra.CENTENO","Dr.QUISPE M.","Dr.CONDORI","Dr.MAMANI T.","Dra.GUTIERREZ","Dra.ONOFRE"};
 
 struct citass{
 	int h;       
@@ -1779,11 +1779,11 @@ void pantalla(int tur,string doc,int mes,int dia){
 		string producto=" ";
 		for(int i=1; i<=6;i++){
 			if(i<10){
-				cout<<horari<<espaciar(2,12)<< doc<<espaciar(producto.size(),16)<<mec[mes].mesit[dia].manana[i]<<endl;
+				cout<<horari<<espaciar(2,12)<< doc<<espaciar(producto.size(),12)<<mec[mes].mesit[dia].manana[i]<<endl;
 			horari=horari+1;
 			}
 			else{
-				cout<<horari<<espaciar(1,12)<< doc<<espaciar(producto.size(),16)<<mec[mes].mesit[dia].manana[i]<<endl;
+				cout<<horari<<espaciar(1,12)<< doc<<espaciar(producto.size(),12)<<mec[mes].mesit[dia].manana[i]<<endl;
 			horari=horari+1;
 			}
 		}
@@ -1796,7 +1796,7 @@ void pantalla(int tur,string doc,int mes,int dia){
 		cout<<"------------------------------------------"<<endl;
 		string producto=" ";
 		for(int i=1; i<=6;i++){
-			cout<<horari<<espaciar(4,18)<< doc<<espaciar(producto.size(),19)<<mec[mes].mesit[dia].tardd[i]<<endl;
+			cout<<horari<<espaciar(4,18)<< doc<<espaciar(producto.size(),12)<<mec[mes].mesit[dia].tardd[i]<<endl;
 			horari=horari+1;
 		}
 	}	
