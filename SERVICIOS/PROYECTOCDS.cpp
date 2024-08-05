@@ -67,6 +67,7 @@ struct USUARIOS{
 
 }us[100];
 
+void remplass(int tur,int mes, int dia, int xu);
 int remplazarhorita(int tur,int horita);
 int inimes(int ano, int mes);
 int caldiames(int ano,int mes);
@@ -785,6 +786,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
@@ -825,6 +828,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 3:{
@@ -867,6 +872,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 4:{
@@ -909,6 +916,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 5:{
@@ -951,6 +960,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 6:{
@@ -993,6 +1004,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 7:{
@@ -1035,6 +1048,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 8:{
@@ -1077,6 +1092,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 9:{
@@ -1119,6 +1136,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 10:{
@@ -1161,6 +1180,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 11:{
@@ -1203,6 +1224,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 		case 12:{
@@ -1245,6 +1268,8 @@ void citas(int a,int op, int e){
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
+			remplass(tur, mes, dia, xu);
+			system("cls");
 		break;
 		}
 	}
@@ -1706,5 +1731,14 @@ int remplazarhorita(int tur,int horita){
 				}
 			}
 		}
+	}
+}
+
+void remplass(int tur,int mes, int dia, int xu){
+	if(tur==1){
+		mec[mes].mesit[dia].manana[xu]='n';
+	}
+	else{
+	mec[mes].mesit[dia].tardd[xu]='n';	
 	}
 }
