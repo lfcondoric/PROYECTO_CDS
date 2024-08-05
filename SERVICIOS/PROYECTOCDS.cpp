@@ -5,6 +5,8 @@
 #include<fstream>
 using namespace std;
 
+//PROGRAMA PRINCIPAL DEL PROYECTO
+
 int a=0;//Variable global para determinar en que índice se encuentra almacenada los datos de los usuarios
 
 struct FECHA{
