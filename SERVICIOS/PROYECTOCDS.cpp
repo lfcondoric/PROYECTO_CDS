@@ -19,8 +19,8 @@ struct DOMI{
 };
 
 struct CITAS{
-	int fdia, dia, fmes, mes, fano, ano, dni;//<-- Los que f.... alamacenará la fecha actual en la que se solicito la cita. Dia,mes, ano es la fecha programada para la cita
 	string medico;
+	int fdia, dia, fmes, mes, fano, ano, dni;//<-- Los que f.... alamacenará la fecha actual en la que se solicito la cita. Dia,mes, ano es la fecha programada para la cita
 	string especialidad;
 	int consultorio;
 	string nombres;
@@ -40,16 +40,18 @@ struct nocit{
 	int daes[5];
 };
 
-struct mestarma{
-	tarmas mesit[31];
-};
-
 struct tarmas{
 	char manana[6];
 	char tardd[6];
 };
 
-struct citas{
+struct mestarma{
+	tarmas mesit[31];
+};
+
+string medico[11]={"Dr. LUJAN","Dr. MAMANI","Dr. QUISPE","Dr. DELOCHO","Dra. Diaz ","Dra. CENTENO","Dr. QUISPE M.","Dr. CONDORI","Dr. MAMANI T.","Dra. GUTIERREZ","Dra. ONOFRE "};
+
+struct citass{
 	int h;       
 	int di;
 	string me;
@@ -57,7 +59,7 @@ struct citas{
 };
 
 struct USUARIOS{
-	
+	citass ala[50];
 	int dni;
 	string nombres;
 	string apellidos;
@@ -74,6 +76,8 @@ struct USUARIOS{
 
 }us[100];
 
+string namemes(int mes);
+string espaciar(int tam, int valor);
 void remplass(int tur,int mes, int dia, int xu);
 int remplazarhorita(int tur,int horita);
 int inimes(int ano, int mes);
@@ -105,9 +109,9 @@ void anticoagulantes(int a,int op);
 void antihipertensivos(int a,int op);
 void pantalla(int tur,string doc,int mes,int dia);
 
-int tope=1;
+int tope=0;
 mestarma mec[12];
-
+nocit mecit[12];
 int main(){
 	nocit mecit[12];
     menu();
@@ -694,9 +698,9 @@ void historialdeC(int a){
 		cout<<"\tDNI: "<<us[a].citas[i].dni<<endl;
 		cout<<"-----------------------------------------------"<<endl;
 		cout<<"INFORMACION DE LA CITA"<<endl;
-		cout<<"\tFecha: "<<endl;
-		cout<<"\tHora: "<<endl;
-		cout<<"\tMedico: "<<endl;
+		cout<<"\tFecha: "<<us[a].ala[i].me<<"/"<<us[a].ala[i].di<<"/"<<us[a].ala[i].an<<endl;
+		cout<<"\tHora: "<<us[a].ala[i].h<<endl;
+		cout<<"\tMedico: "<<us[a].citas[i].medico<<endl;
 		cout<<"\tEspecialidad: "<<us[a].citas[i].especialidad<<endl;
 		cout<<"\tConsultorio: "<<us[a].citas[i].consultorio<<endl;
 		cout<<"-----------------------------------------------"<<endl;
@@ -740,7 +744,10 @@ void citas(int a,int op, int e){
 	us[a].citas[e].apellidos=us[a].apellidos;
 	cout<<"\tDNI: "<<us[a].dni<<endl;
 	us[a].citas[e].dni=us[a].dni;
-
+	us[a].citas[e].medico=medico[op-1];
+	act=1;
+	oct=0;
+	tope=tope+1;
 	if(tope<2){
 		for(int a=1;a<=12;a++){
 			for(int b=1;b<=31;b++){
@@ -754,7 +761,7 @@ void citas(int a,int op, int e){
 	}
 	switch(mes){
 		case 1:{
-			cout<<"-----------enero-----------"<<endl;
+			cout<<"-----------ENERO-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -784,24 +791,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 2:{
-			cout<<"----------febrero----------"<<endl;
+			cout<<"----------FEBRERO----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -831,24 +838,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 3:{
-			cout<<"-----------marzo-----------"<<endl;
+			cout<<"-----------MARZO-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -878,24 +885,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 4:{
-			cout<<"-----------abril-----------"<<endl;
+			cout<<"-----------ABRIL-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -925,24 +932,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 5:{
-			cout<<"------------mayo------------"<<endl;
+			cout<<"------------MAYO------------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -972,24 +979,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 6:{
-			cout<<"-----------junio-----------"<<endl;
+			cout<<"-----------JUNIO-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1019,24 +1026,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 7:{
-			cout<<"-----------julio-----------"<<endl;
+			cout<<"-----------JULIO-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1066,24 +1073,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 8:{
-			cout<<"-----------agosto-----------"<<endl;
+			cout<<"-----------AGOSTO-----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1113,24 +1120,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 9:{
-			cout<<"----------septiembre----------"<<endl;
+			cout<<"----------SEPTIEMBRE----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1160,24 +1167,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 10:{
-			cout<<"----------octubre----------"<<endl;
+			cout<<"----------OCTUBRE----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1207,24 +1214,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 11:{
-			cout<<"----------noviembre----------"<<endl;
+			cout<<"----------NOVIEMBRE----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1254,24 +1261,24 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 		case 12:{
-			cout<<"----------diciembre----------"<<endl;
+			cout<<"----------DICIEMBRE----------"<<endl;
 			calendario();
 			mesdias(ano,mes);
 			cout<<endl;
@@ -1301,40 +1308,41 @@ void citas(int a,int op, int e){
 			}while(oct!=act);
 			system("cls");
 			cout<<endl;
-			cout<<"-----------elije el horario------------"<<endl;
-			cout<<"1.mañana"<<endl;
+			cout<<"-----------elige el horario------------"<<endl;
+			cout<<"1.manana"<<endl;
 			cout<<"2.tarde "<<endl;
 			cout<<"EL HORARIO QUE ELIJES ES: "<<endl;
 			cin>>tur;
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"ELIGE UNA HORA: "<<endl;
 			cin>>horita;
 			xu=remplazarhorita(tur, horita);
 			remplass(tur, mes, dia, xu);
 			system("cls");
-			pantalla(tur,doc, mes,dia);
+			pantalla(tur,us[a].citas[e].medico, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
 		break;
 		}
 	}
 	system("cls");
-	cita[tope].h=horita;
-	cita[tope].di=dia;
-	cita[tope].me=namemes(mes);
-	cita[tope].an=ano;
+	us[a].ala[tope].h=horita;
+	us[a].ala[tope].di=dia;
+	us[a].ala[tope].me=namemes(mes);
+	us[a].ala[tope].an=ano;
+	system("cls");
+	cout<<endl;
 	cout<<"--------------------------------------------"<<endl;
-	cout<<"------------------CITA-----------------"<<endl;
-	cout<<"DIA:               "<<cita[tope].di<<endl;
-	cout<<"MES:               "<<cita[tope].me<<endl;
-	cout<<"ANO:               "<<cita[tope].an<<endl;
+	cout<<"---------------CITA---------------"<<endl;
+	cout<<"DIA:            "<<us[a].ala[tope].di<<endl;
+	cout<<"MES:            "<<us[a].ala[tope].me<<endl;
+	cout<<"ANO:            "<<us[a].ala[tope].an<<endl;
 	cout<<"\tEspecialidad: "<<S[op-1]<<endl;
 	us[a].citas[e].especialidad=S[op-1];
 	cout<<"\tConsultorio: "<<op<<endl;
 	us[a].citas[e].consultorio=op;
 	cout<<"--------------------------------------------"<<endl;
 	us[a].i=e;
-	tope++;
 }
 
 void farmacia(int a){
@@ -1694,7 +1702,7 @@ void pantalla(int tur,string doc,int mes,int dia){
 	}
 	if(tur==1){
 		cout<<"------------------------------------------"<<endl;
-		cout<<"------------------MAÑANA------------------"<<endl;
+		cout<<"------------------MANANA------------------"<<endl;
 		cout<<"HORA             DOCTOR     DISPONIBILIDAD"<<endl;
 		cout<<"------------------------------------------"<<endl;
 		string producto=" ";
@@ -1791,5 +1799,69 @@ void remplass(int tur,int mes, int dia, int xu){
 	}
 	else{
 	mec[mes].mesit[dia].tardd[xu]='n';	
+	}
+}
+
+string espaciar(int tam, int valor){
+	int espacio =0;
+	string texto =" ";
+	espacio=valor-tam;
+	for(int i=1;i<espacio;i++){
+		texto= texto+" ";
+	}
+	return texto;
+}
+
+
+string namemes(int mes){
+	switch(mes){
+		case 1:{
+			return "ENERO";
+			break;
+		}
+		case 2:{
+			return "FEBRERO";
+			break;
+		}
+		case 3:{
+			return "MARZO";
+			break;
+		}
+		case 4:{
+			return "ABRIL";
+			break;
+		}
+		case 5:{
+			return "MAYO";
+			break;
+		}
+		case 6:{
+			return "JUNIO";
+			break;
+		}
+		case 7:{
+			return "JULIO";
+			break;
+		}
+		case 8:{
+			return "AGOSTO";
+			break;
+		}
+		case 9:{
+			return "SEPTIEMBRE";
+			break;
+		}
+		case 10:{
+			return "OCTUBRE";
+			break;
+		}
+		case 11:{
+			return "NOVIEMBRE";
+			break;
+		}
+		case 12:{
+			return "DICIEMBRE";
+			break;
+		}
 	}
 }
