@@ -798,6 +798,8 @@ void citas(int a,int op, int e){
 			pantalla(tur,doc, mes,dia);
 			cout<<"-----LA CITA YA HA SIDO PRESTABLECIDA-------"<<endl;
 			system("pause");
+		break;
+		}
 		case 2:{
 			cout<<"----------febrero----------"<<endl;
 			calendario();
@@ -1316,7 +1318,11 @@ void citas(int a,int op, int e){
 		break;
 		}
 	}
-
+	system("cls");
+	cita[tope].h=horita;
+	cita[tope].di=dia;
+	cita[tope].me=namemes(mes);
+	cita[tope].an=ano;
 	cout<<"-----------------------------------------------"<<endl;
 	cout<<"INFORMACION DE LA CITA"<<endl;
 	cout<<"\tFecha: "<<endl;   
